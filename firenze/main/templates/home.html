@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{% static 'home.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<section class="hero-sec">
+    <div class="container">
+        <div class="hero">
+            <div class="hero__subtitle">Новые поступления</div>
+            <h1 class="hero__title">Весна - лето</h1><a class="hero__goAll" href="./">Смотреть все </a>
+        </div>
+    </div>
+</section>
+<section class="elegancy-sec">
+    <div class="container">
+        <div class="elegancy-top">
+            <h2 class="sec-title">Новая коллекция</h2>
+            <div class="elegancy-btns">
+                <div class="elegancy-btns__item elegancy-prev swiper-button-prev">
+                    <img class="elegancy-btns__item--img" src="../../shared/icons/prevLong.svg" alt />
+                </div>
+                <div class="elegancy-btns__item elegancy-next swiper-button-next"><img class="elegancy-btns__item--img"
+                        src="../../shared/icons/nextLong.svg" alt /></div>
+            </div>
+        </div>
+        <div class="elegancy">
+            <div class="elegancy-left"> <a class="product" href><img class="product__image"
+                        src="../../shared/img/product.png" alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999 ₽</p>
+                    </div>
+                </a><a class="product" href><img class="product__image" src="../../shared/img/product.png" alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999 ₽</p>
+                    </div>
+                </a><a class="product" href><img class="product__image" src="../../shared/img/product.png" alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999 ₽</p>
+                    </div>
+                </a><a class="product" href><img class="product__image" src="../../shared/img/product.png" alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999
+                            ₽</p>
+                    </div>
+                </a></div><a class="elegancy-big" href><img class="elegancy-big__img" src="../../pages/home/img/big.png"
+                    alt />
+                <div class="elegancy-big__price">1 999 ₽ </div>
+                <div class="elegancy-big__title">Name
+                    Clothes</div>
+            </a>
+        </div>
+        <div class="elegancy-mob">
+            <div class="swiper-wrapper"> <a class="swiper-slide product" href><img class="product__image"
+                        src="../../shared/img/product.png" alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999 ₽</p>
+                    </div>
+                </a><a class="swiper-slide product" href><img class="product__image" src="../../shared/img/product.png"
+                        alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999 ₽</p>
+                    </div>
+                </a><a class="swiper-slide product" href><img class="product__image" src="../../shared/img/product.png"
+                        alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999 ₽</p>
+                    </div>
+                </a><a class="swiper-slide product" href><img class="product__image" src="../../shared/img/product.png"
+                        alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999 ₽</p>
+                    </div>
+                </a><a class="swiper-slide product" href><img class="product__image" src="../../shared/img/product.png"
+                        alt />
+                    <div class="product-content">
+                        <div class="product__title">Name Clothes</div>
+                        <p class="product__price">1 999
+                            ₽</p>
+                    </div>
+                </a></div>
+        </div>
+        <div class="elegancy-bottom">
+            <h2 class="elegancy-bottom__title">Элегантность и
+                аутентичность</h2>
+            <p class="elegancy-bottom__description">Антонелли Флоренция
+                празднует утонченную и тихую элегантность, воплощая силу и
+                осведомленность женской аудитории, которая выбирает без
+                компромиссов. Каждое творение-это ода эксклюзивности и
+                итальянскому совершенству, где стиль, роскошь и детали
+                ручной работы сочетаются в уверенном и решительном выражении
+                женственности.</p>
+        </div>
+    </div>
+</section>
+<section class="categories-sec">
+    <div class="container">
+        <h2 class="sec-title">Каталог</h2>
+        <div class="categories"> <a class="categories__item" href="./"><img class="categories__item-img"
+                    src="../../pages/home/img/category.png" alt />
+                <div class="categories__item-title">Category Name</div>
+            </a><a class="categories__item" href="./"><img class="categories__item-img"
+                    src="../../pages/home/img/category.png" alt />
+                <div class="categories__item-title">Category
+                    Name</div>
+            </a></div>
+    </div>
+</section>
+
+{% include 'telegram.html'  %}
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'home.js' %}" defer="defer"> </script>
+
+{% endblock scripts %}
+
+</html>

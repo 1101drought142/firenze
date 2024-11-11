@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{% static 'cart.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<section class="cart-sec">
+    <div class="container">
+        <div class="cart-top">
+            <h1 class="page-title cart__title">Корзина</h1><button class="btn cart__clear">Очистить всю корзину</button>
+        </div>
+        <form class="cart">
+
+            {% include 'cart_item.html'  %}
+
+            {% include 'cart_item.html'  %}
+            
+            {% include 'cart_item.html'  %}
+
+            <div class="cart-total">
+                <div class="cart-total__price"> <span>ИТОГО:</span>
+                    <div>1 999 ₽</div>
+                </div><button class="btn cart-total__offer">Оформить заказ</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'inputsController.js' %}" defer="defer"> </script>
+<script src="{% static 'cart.js' %}" defer="defer"> </script>
+
+{% endblock scripts %}
+
+</html>

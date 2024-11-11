@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'account.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<section class="lk-sec">
+    <div class="container">
+        <h1 class="lk__title page-title">аккаунт</h1>
+        <div class="lk">
+            <div class="lk-panel"> 
+                {% include 'personal_small_info.html'%}
+                {% include 'personal_menu.html' with active_page='orders' %}
+            </div>
+            <div class="lk-content">
+                <div class="lk-orders">
+                    <div class="status">
+                        <div class="status-images"> <img class="status-images__img"
+                                src="../../pages/account/img/qwe.png" alt /><img class="status-images__img"
+                                src="../../pages/account/img/qwe.png" alt /><img class="status-images__img"
+                                src="../../pages/account/img/qwe.png" alt /><img class="status-images__img"
+                                src="../../pages/account/img/qwe.png" alt /></div>
+                        <div class="status-content">
+                            <div class="status-content__status">В обработке
+                                - оплачен</div>
+                            <div class="status-content__number">заказ
+                                #123</div>
+                            <div class="status-content__date">от
+                                08.08.24</div>
+                        </div><button class="btn status__btn">Подробнее</button>
+                    </div>
+                    <div class="status">
+                        <div class="status-images"> <img class="status-images__img"
+                                src="../../pages/account/img/qwe.png" alt /><img class="status-images__img"
+                                src="../../pages/account/img/qwe.png" alt /></div>
+                        <div class="status-content">
+                            <div class="status-content__status">В обработке
+                                - оплачен</div>
+                            <div class="status-content__number">заказ
+                                #123</div>
+                            <div class="status-content__date">от
+                                08.08.24</div>
+                        </div><button class="btn status__btn">Подробнее</button>
+                    </div>
+                    <div class="status">
+                        <div class="status-images"> <img class="status-images__img"
+                                src="../../pages/account/img/qwe.png" alt /></div>
+                        <div class="status-content">
+                            <div class="status-content__status">В обработке
+                                - оплачен</div>
+                            <div class="status-content__number">заказ
+                                #123</div>
+                            <div class="status-content__date">от
+                                08.08.24</div>
+                        </div><button class="btn status__btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'account.js' %}" defer="defer"> </script>
+
+{% endblock scripts %}
+
+</html>

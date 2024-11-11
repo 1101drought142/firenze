@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'account.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<section class="lk-sec">
+    <div class="container">
+        <h1 class="lk__title page-title">аккаунт</h1>
+        <div class="lk">
+            <div class="lk-panel"> 
+                {% include 'personal_small_info.html'%}
+                {% include 'personal_menu.html' with active_page='account' %}
+            </div>
+            <div class="lk-content">
+                <div class="lk-info__title">персональная информация </div>
+                <div class="lk-info">
+                    <div class="input textInput">
+                        <div class="input__title">Имя</div><input class="input__field" type="text"
+                            placeholder="Екатерина" />
+                        <div class="input__error">Введите корректное значение!</div>
+                    </div>
+                    <div class="input textInput">
+                        <div class="input__title">Фамилия</div><input class="input__field" type="text"
+                            placeholder="Иванова" />
+                        <div class="input__error">Введите корректное значение!</div>
+                    </div>
+                    <div class="input mailInput">
+                        <div class="input__title">Почта</div><input class="input__field" type="mail"
+                            placeholder="adam@example.com" />
+                        <div class="input__error">Почта введена некорректно</div>
+                    </div>
+                    <div class="input phoneInput">
+                        <div class="input__title">Номер телефона</div><input class="input__field" type="text"
+                            placeholder="+7 900 999 99 99" />
+                        <div class="input__error">Введите корректное значение!</div>
+                    </div>
+                    <div class="input dateInput">
+                        <div class="input__title">Дата рождения</div><input class="input__field" type="text"
+                            placeholder="12.09.1993" />
+                        <div class="input__error">Введите корректное значение!</div>
+                    </div>
+                </div>
+                <div class="lk-info__title">Сменить пароль</div>
+                <div class="lk-info">
+                    <div class="input passwordInput">
+                        <div class="input__title">Старый пароль</div><input class="input__field" type="text"
+                            placeholder="*********" />
+                        <div class="input__error">Введите корректное значение!</div>
+                    </div>
+                    <div class="input passwordInput">
+                        <div class="input__title">Новый пароль</div><input class="input__field" type="text"
+                            placeholder="password" />
+                        <div class="input__error">Введите корректное значение!</div>
+                    </div>
+                </div>
+                <div class="btn black lk__save">Сохранить изменения</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block scripts %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script src="{% static 'inputsController.js' %}" defer="defer"> </script>
+<script src="{% static 'account.js' %}" defer="defer"> </script>
+
+{% endblock scripts %}
+
+</html>

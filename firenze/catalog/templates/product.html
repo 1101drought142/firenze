@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{% static 'product.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<div class="modal overlayContent sizes-modal">
+    <div class="modal__close close-overlays"> <img class="modal__close-img" src="../../shared/icons/cross.svg" alt />
+    </div>
+    <div class="modal__title">Как определить размер</div><img class="modal__img" src="./img/sizes.png" alt />
+</div>
+<section class="pproduct-sec">
+    <div class="container"> <a class="btn pproduct-back" href="./">Назад в каталог</a>
+        <div class="pproduct">
+            <div class="pproduct-left">
+                <div class="pproduct-slider-main swiper">
+                    <div class="swiper-wrapper">
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                    </div>
+                </div>
+                <div class="pproduct-slider-sub swiper" thumbsSlider>
+                    <div class="swiper-wrapper">
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                        <div class="pproduct-slider__img swiper-slide"> <img
+                                src="../../pages/product/img/productImg.jpg" alt /></div>
+                    </div>
+                </div>
+                <div class="pproduct-left-main"> <img class="pproduct-left-main__img"
+                        src="../../pages/product/img/productImg.jpg" alt /><img class="pproduct-left-main__img"
+                        src="../../pages/product/img/productImg.jpg" alt /><img class="pproduct-left-main__img"
+                        src="../../pages/product/img/productImg.jpg" alt /><img class="pproduct-left-main__img"
+                        src="../../pages/product/img/productImg.jpg" alt /><img class="pproduct-left-main__img"
+                        src="../../pages/product/img/productImg.jpg" alt /></div>
+            </div>
+            <div class="pproduct-right"> <a class="pproduct-right__category" href="./">
+                    <span>Collection Name</span><img src="../../shared/icons/arrowRight.svg" alt /></a>
+                <h1 class="pproduct-right__title">Name
+                    Clothes </h1>
+                <div class="pproduct-right__price">1 999
+                    ₽</div>
+                <div class="pproduct-right__block pproduct-block"> <span class="pproduct-block__title">Размеры: <img
+                            class="helper open-modal" data-modal="sizes-modal"
+                            src="../../shared/icons/helper.svg"></span>
+                    <div class="pproduct-block-items"> <input class="pproduct-block-items__input" type="radio"
+                            name="sizes" checked="checked" id="sizes1" /><label
+                            class="pproduct-block-items__label square" for="sizes1">S </label><input
+                            class="pproduct-block-items__input" type="radio" name="sizes" id="sizes2" /><label
+                            class="pproduct-block-items__label square" for="sizes2">M </label><input
+                            class="pproduct-block-items__input" type="radio" name="sizes" id="sizes3" /><label
+                            class="pproduct-block-items__label square" for="sizes3">L </label><input
+                            class="pproduct-block-items__input" type="radio" name="sizes" id="sizes4" /><label
+                            class="pproduct-block-items__label square" for="sizes4">XL </label></div>
+                </div>
+                <div class="pproduct-right__block pproduct-block"> <span class="pproduct-block__title">Материал:</span>
+                    <div class="pproduct-block-items"> <input class="pproduct-block-items__input" type="radio"
+                            name="mat" checked="checked" id="mat1" /><label class="pproduct-block-items__label"
+                            for="mat1">Шелк</label><input class="pproduct-block-items__input" type="radio" name="mat"
+                            id="mat2" /><label class="pproduct-block-items__label" for="mat2">Сатин</label><input
+                            class="pproduct-block-items__input" type="radio" name="mat" id="mat3" /><label
+                            class="pproduct-block-items__label" for="mat3">Хлопок</label></div>
+                </div>
+                <div class="pproduct-right__block pproduct-block"> <span class="pproduct-block__title">Цвет:</span>
+                    <div class="pproduct-block-items"> <input class="pproduct-block-items__input" type="radio"
+                            name="color" checked="checked" id="color1" /><label
+                            class="pproduct-block-items__label square" for="color1">
+                            <div class="color" style="background-color: #333">
+                            </div>
+                        </label><input class="pproduct-block-items__input" type="radio" name="color"
+                            id="color2" /><label class="pproduct-block-items__label square" for="color2">
+                            <div class="color" style="background-color: #6300ff">
+                            </div>
+                        </label><input class="pproduct-block-items__input" type="radio" name="color"
+                            id="color3" /><label class="pproduct-block-items__label square" for="color3">
+                            <div class="color" style="background-color: #002f0f">
+                            </div>
+                        </label><input class="pproduct-block-items__input" type="radio" name="color"
+                            id="color4" /><label class="pproduct-block-items__label square" for="color4">
+                            <div class="color" style="background-color: #c3c3c3">
+                            </div>
+                        </label></div>
+                </div>
+                <div class="pproduct-right-btns"> <button class="btn pproduct-right-btns__addToCart">Добавить
+                        в корзину</button><button class="btn pproduct-right-btns__addToFavorite fav-btn">
+                        <img src="../../shared/icons/heart.svg" alt /></button></div>
+                <div class="pproduct-description"> <span class="pproduct-description__title">Описание:</span>
+                    <p>Длина
+                        брюк 112 см в размере 42, широкая нога, эластичный
+                        пояс только сзади, две упорные складки, два косых
+                        кармана спереди, один карман на
+                        спине<br><br><b>Состав: 64% Хлопок 36%
+                            Полиэстер</b><br><br>Каждый предмет одежды
+                        сделан в Италии.</p>
+                </div>
+                <div class="pproduct-tabs tabs">
+                    <div class="tabs__item pproduct-tabs__item active" data-tab-base="productInfo" data-tab-val="1">
+                        Доставка</div>
+                    <div class="tabs__item pproduct-tabs__item" data-tab-base="productInfo" data-tab-val="2">Оплата
+                    </div>
+                    <div class="tabs__item pproduct-tabs__item" data-tab-base="productInfo" data-tab-val="3">Возврат
+                    </div>
+                </div>
+                <div class="pproduct-tabs-content tab-content active" data-tab-base="productInfo" data-tab-val="1">Lorem
+                    ipsum
+                    dolor sit amet consectetur adipisicing elit. Quae
+                    tenetur nihil consequatur voluptatibus reprehenderit,
+                    quos ducimus vel harum quas veniam!</div>
+                <div class="pproduct-tabs-content tab-content" data-tab-base="productInfo" data-tab-val="2">ectetur
+                    adipisicing elit. Quae tenetur nihil consequatur
+                    voluptatibus reprehenderit, quos ducimus vel harum quas
+                    veniam!</div>
+                <div class="pproduct-tabs-content tab-content" data-tab-base="productInfo" data-tab-val="3">333Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Quae
+                    tenetur nihil consequatur voluptatibus reprehenderit,
+                    quos ducimus vel harum quas
+                    veniam!</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'product.js' %}" defer="defer"> </script>
+<script src="{% static 'tabs.js' %}" defer="defer"> </script>
+
+{% endblock scripts %}
+
+</html>

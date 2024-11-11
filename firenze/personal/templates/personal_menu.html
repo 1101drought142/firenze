@@ -1,0 +1,20 @@
+{% load static %}
+<div class="lk-panel__list">
+    <div class="paddinger"> </div>
+        <a class="lk-panel__list-item {% if active_page == 'account' %} active {% endif %}" href="{% url 'account_page' %}"> 
+            <img class="lk-panel__list-item-img"  src="{% static 'icons/user.svg'%}" alt="" />
+            <span>Личная информация</span>
+        </a>
+        <a class="lk-panel__list-item {% if active_page == 'favorites' %} active {% endif %}" href="{% url 'favourites_page' %}"> 
+            <img class="lk-panel__list-item-img" src="{% static 'icons/heart.svg'%}" alt="" />
+            <span>Избранное</span>
+        </a>
+        <a class="lk-panel__list-item {% if active_page == 'orders' %} active {% endif %}" href="{% url 'orders_page' %}"> 
+            <img class="lk-panel__list-item-img" src="{% static 'icons/orders.svg'%}" alt="" />
+            <span>Заказы</span>
+        </a>
+        <a class="lk-panel__list-item logout" href="./"> 
+            <img class="lk-panel__list-item-img" src="{% static 'icons/logout.svg'%}" alt="" />
+            <span>Выйти</span>
+        </a>
+</div>

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{% static 'auth.css' %}" />
+{% endblock styles %}
+
+{% block content %}
+<section class="auth-sec">
+    <div class="container">
+        <form class="auth">
+            <h1 class="auth__title">регистрация</h1>
+            <p class="auth__subtitle">При регистрации на сайте вы получаете постоянную скидку 5%, которая может
+                повышаться в клиентские дни</p>
+            <div class="input textInput">
+                <div class="input__title">Имя Фамилия*</div><input class="input__field" type="text"
+                    placeholder="Елена Иванова" />
+                <div class="input__error">Введите корректное значение!</div>
+            </div>
+            <div class="input dateInput">
+                <div class="input__title">Дата рождения</div><input class="input__field" type="text"
+                    placeholder="08.08.1990" />
+                <div class="input__error">Введите корректное значение!</div>
+            </div>
+            <div class="input mailInput">
+                <div class="input__title">Почта</div><input class="input__field" type="mail"
+                    placeholder="adam@adam.adam" />
+                <div class="input__error">Почта введена некорректно</div>
+            </div>
+            <div class="input phoneInput">
+                <div class="input__title">Номер телефона*</div><input class="input__field" type="text"
+                    placeholder="+7" />
+                <div class="input__error">Введите корректное значение!</div>
+            </div>
+            <div class="input passwordInput">
+                <div class="input__title">Пароль*</div><input class="input__field" type="text" placeholder="Password" />
+                <div class="input__error">Введите корректное значение!</div>
+            </div><button class="btn black auth__signup">зарегистрироваться</button>
+            <p class="auth__subinfo">Нажимая кнопку “Зарегистрироваться” вы даете согласие на обработку своих
+                персоанльных данных</p><button class="btn auth__hasAccount">У вас есть аккаунт? <a href="./">Войти
+                </a></button>
+        </form>
+    </div>
+</section>
+{% endblock content %}
+
+{% block scripts %}
+<script src="https://unpkg.com/imask"></script>
+<script src="{% static 'inputsController.js' %}" defer="defer"> </script>
+<script src="{% static 'tabs.js' %}" defer="defer"> </script>
+<script src="{% static 'auth.js' %}" defer="defer"> </script>
+
+{% endblock scripts %}
+
+</html>
