@@ -52,7 +52,8 @@ const favBtns = document.querySelectorAll('.fav-btn');
 
 favBtns.forEach(fav => {
 
-  fav.onclick = () => {
+  fav.onclick = (e) => {
+    e.preventDefault();
     // promise callback
     const snack = document.querySelector('.fav-snack');
 
