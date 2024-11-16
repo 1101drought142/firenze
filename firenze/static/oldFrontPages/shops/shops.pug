@@ -1,0 +1,93 @@
+html
+  link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+
+
+  include ./shopsVars.pug
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet", href="./shops.css")
+  
+  
+  block Variables
+
+  section.hero-sec.short-hero.only-title(style="background-image: url('../../pages/shops/img/shopsbg.jpg')")
+    .container 
+      .hero 
+        h1.hero__title Магазины
+
+  section.shops-sec
+    .container 
+      h2.shops__title.sec-title Магазины
+      .shops 
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem2.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+  section.shops-sec
+    .container 
+      h2.shops__title.sec-title аутлеты
+      .shops 
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem2.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem2.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem2.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+  section.shops-sec
+    .container 
+      h2.shops__title.sec-title корнеры
+      .shops 
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem2.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem2.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+        .shops-item 
+          img.shops-item__img(src="../../pages/shops/img/shopItem.jpg", alt="")
+          .shops-item__title name storE 
+          .shops-item__place Ул. пушкина, д. 50, 2 этаж
+          a.shops-item__phone(href="tel:88009991010") 8 800 999 99 99
+
+
+ 
+
+
+
+  include ../../widgets/telegram/telegram.pug
+    
+  include ../../widgets/footer/footer.pug
+  script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+  script(src="shops.js" defer) 
+
+  
+  
+

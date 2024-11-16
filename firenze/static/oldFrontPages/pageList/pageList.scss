@@ -1,0 +1,12 @@
+.pageList {
+  &-item {
+    font-size: 32px;
+    display: flex;
+    margin: 12px 0px;
+    & a {
+      display: block;
+      margin-right: 10px;
+      text-decoration: underline;
+    }
+  }
+}

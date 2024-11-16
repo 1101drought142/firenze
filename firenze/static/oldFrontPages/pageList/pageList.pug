@@ -1,0 +1,68 @@
+html
+  include ../../widgets/header/header.pug
+  link(rel="stylesheet", href="./pageList.css")
+  
+  
+  block Variables
+
+
+  section.pageList 
+    .container 
+      .pageList-item 
+        a(href="../../pages/home/home.html") Главная  
+
+      hr(style="margin: 30px 0px;")
+      .pageList-item 
+        a(href="../../pages/account/favorites.html") Личный кабинет Избранное
+      .pageList-item 
+        a(href="../../pages/account/info.html") Личный кабинет Инфo
+      .pageList-item 
+        a(href="../../pages/account/orders.html") Личный кабинет Заказы
+
+      hr(style="margin: 30px 0px;")
+      .pageList-item 
+        a(href="../../pages/auth/login.html") Вход Авторизация
+      .pageList-item 
+        a(href="../../pages/auth/forgot.html") Вход Забыли пароль
+      .pageList-item 
+        a(href="../../pages/auth/signUp.html") Вход Регистрация
+
+      hr(style="margin: 30px 0px;")
+      .pageList-item 
+        a(href="../../pages/catalog/catalog.html") Каталог
+      .pageList-item 
+        a(href="../../pages/product/product.html") Страница товара
+
+      hr(style="margin: 30px 0px;")
+      .pageList-item 
+        a(href="../../pages/news/news.html") Блог Новости/посты
+      .pageList-item 
+        a(href="../../pages/news/newsItem.html") Блог Новость/пост - открытая страница
+
+      hr(style="margin: 30px 0px;")
+      .pageList-item 
+        a(href="../../pages/order/order.html") Оформление заказа
+      .pageList-item 
+        a(href="../../pages/order/thanks.html") Оформление - Спасибо за заказ
+
+      hr(style="margin: 30px 0px;")
+      .pageList-item 
+        a(href="../../pages/shops/shops.html") Магазины - Список магазинов
+
+      hr(style="margin: 30px 0px;")
+      .pageList-item 
+        a(href="../../pages/cart/cart.html") Корзина
+    
+  
+
+
+  include ../../widgets/footer/footer.pug
+
+  <script src="https://unpkg.com/imask"></script>
+  script(src="../../shared/lib/tabs.js" defer) 
+  script(src="../../shared/lib/inputsController.js" defer) 
+  script(src="pageList.js" defer) 
+
+  
+  
+
