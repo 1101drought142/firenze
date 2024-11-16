@@ -81,7 +81,7 @@ a {
     height: 600px;
     margin-top: 0;
 
-    background: url('../../pages/home/img/hero.jpg') no-repeat center;
+    background: url('/static/oldFrontPages/home/img/hero.jpg') no-repeat center;
     background-size: cover;
 
     &.short-hero {
@@ -800,5 +800,56 @@ a {
     height: 24px;
     margin-left: auto;
     cursor: pointer;
+  }
+}
+
+
+// burger
+
+.burger {
+
+  &-btn {
+    & .closer {
+      display: none;
+    }
+
+    &.opened {
+      & .closer {
+        display: block;
+      }
+      & .opener {
+        display: none;
+      }
+    }
+  }
+
+  &-menu {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 64px);
+    top: 64px;
+    left: -200%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    z-index: 9999;
+    overflow: auto;
+    transition: all .35s ease;
+    &.active {
+      left: 0;
+    }
+    &__item {
+      color: #000;
+      text-transform: uppercase;
+      margin-top: 32px;
+      &.category {
+        font-weight: 600;
+        margin-top: 40px;
+        &:first-child {
+          margin-top: 0px;
+        }
+      }
+    }
   }
 }

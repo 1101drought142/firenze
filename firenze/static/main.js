@@ -26,17 +26,13 @@ closeOverlays.forEach(close => {
   }
 )});
 
-// burger
-
-// const burgerBtn = document.querySelector('.burger-btn');
-// const burgerMenu = document.querySelector('.burger-menu');
-// const burgerClose = document.querySelector('.burger-menu__close');
-// burgerBtn.onclick = () => {
-//   burgerMenu.classList.add('active');
-// }
-// burgerClose.onclick = () => {
-//   burgerMenu.classList.remove('active');
-// }
+const burgerBtn = document.querySelector('.burger-btn');
+const burgerMenu = document.querySelector('.burger-menu');
+burgerBtn.onclick = () => {
+  burgerBtn.classList.toggle('opened');
+  burgerMenu.classList.toggle('active');
+  body.classList.toggle('disabled');
+}
 
 
 const modalBtns = document.querySelectorAll('.open-modal');

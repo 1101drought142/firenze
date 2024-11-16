@@ -14,6 +14,22 @@
 
 <body>
     <div class="modal-bg close-overlays"></div>
+
+    <div class="burger-menu">
+        <a href="/" class="burger-menu__item category">Каталог</a>
+        <a href="/" class="burger-menu__item category">Клиентам</a>
+        <a href="/" class="burger-menu__item">Правила оформления заказов</a>
+        <a href="/" class="burger-menu__item">Оплата</a>
+        <a href="/" class="burger-menu__item">Доставка</a>
+        <a href="/" class="burger-menu__item">Обмен и возврат</a>
+        <a href="/" class="burger-menu__item category">Мир antonelli firenze</a>
+        <a href="/" class="burger-menu__item">О бренде</a>
+        <a href="/" class="burger-menu__item">Магазины</a>
+        <a href="/" class="burger-menu__item">Новости</a>
+        <a href="/" class="burger-menu__item">Контакты</a>
+    </div>
+
+
     <div class="snack fav-snack overlayContent"> <img class="snack__img" src="{% static 'icons/heartFilled.svg' %}" />
         <div class="snack-content">
             <div>Товар добавлен в Избранное</div><a class="snack-content__link" href="./">Перейти</a>
@@ -27,7 +43,8 @@
                     <div class="header-actions__item header-actions__item--search mob"><img
                             class="header-actions__item-img" src="{% static 'icons/search.svg' %}" /></div>
                     <div class="header-actions__item header-burger burger-btn">
-                        <img class="header-actions__item-img" src="{% static 'icons/burger.svg' %}" />
+                        <img class="header-actions__item-img opener" src="{% static 'icons/burger.svg' %}" />
+                        <img class="header-actions__item-img closer" src="{% static 'icons/burgerClose.svg' %}" />
                     </div>
                 </div><a class="header__logo" href="./"><img class="header__logo-img"
                         src="{% static 'icons/logo.svg' %}" /></a>
