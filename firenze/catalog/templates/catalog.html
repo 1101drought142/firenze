@@ -3,10 +3,79 @@
 
 {% block styles %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{% static 'nouislider.min.css' %}" />
 <link rel="stylesheet" href="{% static 'catalog.css' %}" />
 {% endblock styles %}
 
 {% block content %}
+
+<div class="filter overlayContent">
+    <img src="{% static 'icons/burgerClose.svg' %}" alt="" class="filter__close close-overlays">
+    <div class="filter__title">ФИЛЬТР</div>
+
+    <div class="filter-block" style="border-top: 0px;"> 
+        <span class="filter-block__title">Цена: </span>
+        <div class="filter-block-items slideInput-wrapper"> 
+            <div class="slideInput"></div>
+            <div class="slideInput-fields">
+                <div>
+                    <span>₽</span>
+                    <input type="text" class="slideInput-fields__input min" name="priceMin" data-min-value="10">
+                </div>
+                <span class="separator"></span>
+                <div>
+                    <span>₽</span>
+                    <input type="text" class="slideInput-fields__input max" name="priceMax" data-max-value="1000">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-block"> 
+        <span class="filter-block__title">Размеры: </span>
+        <div class="filter-block-items"> 
+            <input class="filter-block-items__input" type="checkbox" name="sizes" id="sizes1" />
+            <label class="filter-block-items__label square" for="sizes1">S </label>
+            <input class="filter-block-items__input" type="checkbox" name="sizes" id="sizes2" />
+            <label class="filter-block-items__label square" for="sizes2">M </label>
+            <input class="filter-block-items__input" type="checkbox" name="sizes" id="sizes3" />
+            <label class="filter-block-items__label square" for="sizes3">L </label>
+            <input class="filter-block-items__input" type="checkbox" name="sizes" id="sizes4" />
+            <label class="filter-block-items__label square" for="sizes4">XL </label>
+        </div>
+    </div>
+
+    <div class="filter-block"> 
+        <span class="filter-block__title">Материал:</span>
+        <div class="filter-block-items">
+                <input class="filter-block-items__input" type="checkbox" name="mat" id="mat1" />
+                <label class="filter-block-items__label" for="mat1">Шелк</label>
+                <input class="filter-block-items__input" type="checkbox" name="mat" id="mat2" />
+                <label class="filter-block-items__label" for="mat2">Сатин</label>
+                <input class="filter-block-items__input" type="checkbox" name="mat" id="mat3" />
+                <label class="filter-block-items__label" for="mat3">Хлопок</label>
+            </div>
+    </div>
+
+    <div class="filter-block"> <span class="filter-block__title">Цвет:</span>
+        <div class="filter-block-items">
+             <input class="filter-block-items__input" type="checkbox" name="color" id="color1" />
+             <label class="filter-block-items__label square" for="color1"> <div class="color" style="background-color: #333"></div> </label>
+             <input class="filter-block-items__input" type="checkbox" name="color" id="color2" />
+             <label class="filter-block-items__label square" for="color2"> <div class="color" style="background-color: #6300ff"> </div> </label>
+             <input class="filter-block-items__input" type="checkbox" name="color" id="color3" />
+             <label class="filter-block-items__label square" for="color3"> <div class="color" style="background-color: #002f0f"> </div> </label>
+             <input class="filter-block-items__input" type="checkbox" name="color" id="color4" />
+             <label class="filter-block-items__label square" for="color4"> <div class="color" style="background-color: #c3c3c3"></div> </label>
+        </div>
+    </div>
+
+    <div class="filter-btns">
+        <button class="btn filter-btns__btn filter-btns__accept">Применить</button>
+        <button class="btn filter-btns__btn filter-btns__reset">Сбросить</button>
+    </div>
+</div>
+
 <section class="hero-sec short-hero">
     <div class="container">
         <div class="hero">
@@ -18,9 +87,9 @@
 <section class="catalog-sec">
     <div class="container">
         <div class="catalog-actions">
-            <div class="catalog-actions__item filter"> <span>Фильтр</span><img src="{% static 'icons/arrowBottom.svg' %}"
+            <div class="catalog-actions__item filter-btn open-modal" data-modal="filter"> <span>Фильтр</span><img src="{% static 'icons/arrowBottom.svg' %}"
                     alt="" /></div>
-            <div class="catalog-actions__item sort"> <span>Сортировать</span><img
+            <div class="catalog-actions__item sort-btn"> <span>Сортировать</span><img
                     src="{% static 'icons/arrowBottom.svg' %}" alt="" /></div>
         </div>
         <div class="catalog"> <a class="product" href="">
@@ -272,6 +341,7 @@
 {% endblock content %}
 
 {% block scripts %}
+<script src="{% static 'nouislider.min.js' %}" defer="defer"> </script>
 <script src="{% static 'catalog.js' %}" defer="defer"> </script>
 
 {% endblock scripts %}

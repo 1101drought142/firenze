@@ -12,6 +12,7 @@
 .catalog-actions__item {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .catalog-actions__item span {
   text-transform: uppercase;
