@@ -1,0 +1,54 @@
+.telegram {
+  display: flex;
+  flex-direction: column;
+}
+.telegram__name {
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+.telegram__value {
+  width: 100%;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-top: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.telegram__desc {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.75);
+  margin-top: 16px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .telegram__value {
+    font-size: 40px;
+    margin-top: 12px;
+  }
+  .telegram__name {
+    font-size: 22px;
+  }
+  .telegram__desc {
+    margin-top: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .telegram__name {
+    font-size: 22px;
+  }
+  .telegram__value {
+    font-size: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .telegram__name {
+    font-size: 20px;
+  }
+  .telegram__value {
+    font-size: 28px;
+  }
+}/*# sourceMappingURL=telegram.css.map */
