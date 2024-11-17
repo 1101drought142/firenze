@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<div class="filter overlayContent">
+<div class="filter filter-params overlayContent">
     <img src="{% static 'icons/burgerClose.svg' %}" alt="" class="filter__close close-overlays">
     <div class="filter__title">ФИЛЬТР</div>
 
@@ -71,8 +71,29 @@
     </div>
 
     <div class="filter-btns">
-        <button class="btn filter-btns__btn filter-btns__accept">Применить</button>
-        <button class="btn filter-btns__btn filter-btns__reset">Сбросить</button>
+        <button class="btn filter-btns__btn filter-btns__accept" id="filterAccept">Применить</button>
+        <button class="btn filter-btns__btn filter-btns__reset" id="filterReset">Сбросить</button>
+    </div>
+</div>
+
+<div class="filter filter-sort overlayContent">
+    <img src="{% static 'icons/burgerClose.svg' %}" alt="" class="filter__close close-overlays">
+    <div class="filter__title">Сортировка</div>
+
+    <input type="radio" checked id="byDefault" value="byDefault" name="sort" class="filter-sort__input">
+    <label for="byDefault" class="filter-sort__label">По умолчанию</label>
+
+    <input type="radio" id="byPopular" value="byPopular" name="sort" class="filter-sort__input">
+    <label for="byPopular" class="filter-sort__label">По популярности</label>
+
+    <input type="radio" id="byPriceLow" value="byPriceLow" name="sort" class="filter-sort__input">
+    <label for="byPriceLow" class="filter-sort__label">По возрастанию цены</label>
+
+    <input type="radio" id="byPriceHigh" value="byPriceHigh" name="sort" class="filter-sort__input">
+    <label for="byPriceHigh" class="filter-sort__label">По убыванию цены</label>
+
+    <div class="filter-btns">
+        <button class="btn filter-btns__btn filter-btns__accept" id="sortAccept">Применить</button>
     </div>
 </div>
 
@@ -87,9 +108,9 @@
 <section class="catalog-sec">
     <div class="container">
         <div class="catalog-actions">
-            <div class="catalog-actions__item filter-btn open-modal" data-modal="filter"> <span>Фильтр</span><img src="{% static 'icons/arrowBottom.svg' %}"
+            <div class="catalog-actions__item filter-btn open-modal" data-modal="filter-params"> <span>Фильтр</span><img src="{% static 'icons/arrowBottom.svg' %}"
                     alt="" /></div>
-            <div class="catalog-actions__item sort-btn"> <span>Сортировать</span><img
+            <div class="catalog-actions__item sort-btn open-modal" data-modal="filter-sort"> <span>Сортировать</span><img
                     src="{% static 'icons/arrowBottom.svg' %}" alt="" /></div>
         </div>
         <div class="catalog"> <a class="product" href="">
