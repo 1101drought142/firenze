@@ -1,3 +1,54 @@
+// utils
+const showSnack = (classname) => {
+  const snack = document.querySelector(`.${classname}`);
+
+  snack.classList.add('active')
+  setTimeout(() => {
+    snack.classList.remove('active')
+  }, 4500);
+}
+
+const showBaseSnackWithText = (text) => {
+  const snack = document.querySelector('.base-snack');
+  const snackTextField = snack.querySelector('.base-snack-content');
+  snackTextField.textContent = text;
+  snack.classList.add('active');
+  setTimeout(() => {
+    snack.classList.remove('active')
+  }, 4500);
+  
+}
+
+const checkRequiredFields = (form) => {
+  const requiredFields = form.querySelectorAll('input.required');
+  let hasError = false;
+  requiredFields.forEach(field => {
+    if (field.value.length < 3) {
+      hasError = true;
+    }
+  })
+  if (hasError) {
+    showBaseSnackWithText('Ошибка! Заполните все обязательные поля');
+    return true;
+  } 
+  return false;
+
+}
+
+const debounce = (callback, wait) => {
+  let timeoutId = null;
+  return (...args) => {
+    window.clearTimeout(timeoutId);
+    timeoutId = window.setTimeout(() => {
+      callback(...args);
+    }, wait);
+  };
+}
+
+
+//  /utils
+
+
 const modalBg = document.querySelector('.modal-bg');
 const body = document.querySelector('body');
 function changeModalBgState(state = 'toggle') {
@@ -48,19 +99,82 @@ modalBtns.forEach(btn => {
 })
 
 
+
+
+
+
+
 const favBtns = document.querySelectorAll('.fav-btn');
 
 favBtns.forEach(fav => {
 
-  fav.onclick = (e) => {
+  fav.onclick = async (e) => {
     e.preventDefault();
     // promise callback
-    const snack = document.querySelector('.fav-snack');
-
-    snack.classList.add('active')
-    setTimeout(() => {
-      snack.classList.remove('active')
-    }, 4500);
+    const itemId = fav.getAttribute('item-id');
+    if (fav.classList.contains('active')) {
+      const res = await PublicAPI.deleteFromFavorites(itemId);
+      if (res.success) {
+        showSnack('fav-removed');
+        fav.classList.remove('active');
+      } else {
+        showSnack('error-snack');
+      }
+    } else {
+      const res = await PublicAPI.addToFavorites(itemId);
+      if (res.success) {
+        showSnack('fav-snack');
+        fav.classList.add('active');
+      } else {
+        showSnack('error-snack');
+      }
+    }
   }
 
 })
+
+
+
+// Add product
+
+const addProductBtns = document.querySelectorAll('.product__addToCard');
+addProductBtns.forEach(btn => {
+  btn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const productId = btn.closest('.product').getAttribute('variant-id');
+
+    const res = await PublicAPI.addToCart(productId);
+    console.log(res.success);
+    if (res.success) {
+      showSnack('add-success');
+    } else {
+      showSnack('error-snack');
+    }
+  })
+})
+
+//  Add product end
+
+
+// search
+
+const searchHandler = debounce(async (event) => {
+  const string = event.target.value;
+  if (string.length > 2) {
+    const wrapper = document.querySelector('.search-results .search-items');
+  
+    const res = await PublicAPI.search(string);
+    if (res) {
+      wrapper.innerHTML = res;
+    }
+  }
+
+}, 250)
+
+const searchField = document.querySelector('.search-top__input');
+
+searchField.addEventListener('input', searchHandler);
+
+
+// search end

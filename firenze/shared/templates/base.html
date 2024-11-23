@@ -15,6 +15,27 @@
 <body>
     <div class="modal-bg close-overlays"></div>
 
+    <div class="search-menu overlayContent">
+        <img src="{% static 'icons/cross.svg' %}" class="search-menu__close">
+        <div class="search-top-wrap">
+            <div class="container">
+                <div class="search-top">
+                    <div class="search-top__btn">
+                        <img class="search-top__img" src="{% static 'icons/search.svg' %}">
+                    </div>
+                    <input class="search-top__input" type="text" placeholder="Введите запрос">
+                </div>
+            </div>
+        </div>
+        <div class="search-results">
+            <div class="container">
+                <div class="search-items">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="burger-menu">
         <a href="/" class="burger-menu__item category">Каталог</a>
         <a href="/" class="burger-menu__item category">Клиентам</a>
@@ -30,9 +51,33 @@
     </div>
 
 
+    <div class="snack base-snack overlayContent">
+        <div class="snack-content">
+            <div class="base-snack-content"></div>
+        </div>
+        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
+    </div>
+    <div class="snack error-snack overlayContent">
+        <div class="snack-content">
+            <div>Непредвиденная ошибка. Попробуйте повторить позже</div>
+        </div>
+        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
+    </div>
     <div class="snack fav-snack overlayContent"> <img class="snack__img" src="{% static 'icons/heartFilled.svg' %}" />
         <div class="snack-content">
-            <div>Товар добавлен в Избранное</div><a class="snack-content__link" href="./">Перейти</a>
+            <div>Товар добавлен в избранное</div><a class="snack-content__link" href="./">Перейти</a>
+        </div>
+        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
+    </div>
+    <div class="snack fav-removed overlayContent"> <img class="snack__img" src="{% static 'icons/heartFilled.svg' %}" />
+        <div class="snack-content">
+            <div>Товар удалён из избранного</div><a class="snack-content__link" href="./">Перейти</a>
+        </div>
+        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
+    </div>
+    <div class="snack add-success overlayContent"> <img class="snack__img" src="{% static 'icons/cart.svg' %}" />
+        <div class="snack-content">
+            <div>Товар добавлен в корзину</div><a class="snack-content__link" href="/cart/">Перейти</a>
         </div>
         <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
     </div>
@@ -107,6 +152,7 @@
         </div>
     </div>
 </footer>
+<script src="{% static 'api.js' %}"></script>
 <script src="{% static 'main.js' %}"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

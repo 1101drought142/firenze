@@ -1,0 +1,32 @@
+{% load static %}
+<a class="product" href=""  item-id="123" variant-id="222">
+    <div class="product__main"> <button class="product__main-fav fav-btn" item-id="123"> <img
+                class="product__main-fav__img disabled" src="{% static 'icons/heart.svg' %}" alt="" /><img
+                class="product__main-fav__img enabled" src="{% static 'icons/heartFilled.svg' %}"
+                alt="" /></button><img class="product__image" src="{% static 'oldFrontPages/catalog/img/product1.jpg' %}"
+            alt="" />
+        <div class="product__info">
+            <div class="product__info-sub"><span>Размеры:</span>
+                <div>
+                    <p>S </p>
+                    <p>M </p>
+                    <p>L </p>
+                    <p>XL</p>
+                </div>
+            </div>
+            <div class="product__info-sub"><span>Цвета:</span>
+                <div>
+                    <div class="color" style="background-color: #c3b762"> </div>
+                    <div class="color" style="background-color: #c3b762"></div>
+                    <div class="color" style="background-color: #c3b762"> </div>
+                    <div class="color" style="background-color: #c3b762"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-content"> <button class="product__addToCard"> <img class="product__addToCard-img"
+                src="{% static 'icons/cart.svg' %}" /></button>
+        <div class="product__title">Name Clothes</div>
+        <p class="product__price">1 999 ₽</p>
+    </div>
+</a>
