@@ -1,0 +1,113 @@
+
+<div class="pproduct-left">
+    <div class="pproduct-slider-main swiper">
+        <div class="swiper-wrapper">
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+        </div>
+    </div>
+    <div class="pproduct-slider-sub swiper" thumbsSlider>
+        <div class="swiper-wrapper">
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+            <div class="pproduct-slider__img swiper-slide"> <img
+                    src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+        </div>
+    </div>
+    <div class="pproduct-left-main"> <img class="pproduct-left-main__img"
+            src="../../static/oldFrontPages/product/img/productImg.jpg" alt /><img class="pproduct-left-main__img"
+            src="../../static/oldFrontPages/product/img/productImg.jpg" alt /><img class="pproduct-left-main__img"
+            src="../../static/oldFrontPages/product/img/productImg.jpg" alt /><img class="pproduct-left-main__img"
+            src="../../static/oldFrontPages/product/img/productImg.jpg" alt /><img class="pproduct-left-main__img"
+            src="../../static/oldFrontPages/product/img/productImg.jpg" alt /></div>
+</div>
+<div class="pproduct-right"> <a class="pproduct-right__category" href="./">
+        <span>Collection Name</span><img src="../../static/icons/arrowRight.svg" alt /></a>
+    <h1 class="pproduct-right__title">
+        {{product.name}}    
+    </h1>
+    <div class="pproduct-right__price">
+        {{product.price}}
+    </div>
+    <div class="pproduct-right__block pproduct-block"> 
+        <span class="pproduct-block__title">
+            Размеры: 
+            <img class="helper open-modal" data-modal="sizes-modal" src="../../static/icons/helper.svg">
+        
+        </span>
+        <div class="pproduct-block-items">
+            {% for key, size in product.sizes.items %}
+            <input class="pproduct-block-items__input" type="radio" name="sizes" {% if size == product.choosen_size %} checked="checked" {% endif %} id="sizes{{ forloop.counter }}" value="{{key}}" />
+            <label data-variant="{{key}}" class="pproduct-block-items__label square" for="sizes{{ forloop.counter }}">{{size}}</label>
+            {% endfor %}
+
+            
+        </div>
+    </div>
+    <div class="pproduct-right__block pproduct-block"> 
+        <span class="pproduct-block__title">Материал:</span>
+        <div class="pproduct-block-items">
+            {% for key, material in product.materials.items %}
+            <input class="pproduct-block-items__input" type="radio" name="mat" {% if material == product.choosen_material %} checked="checked" {% endif %} id="mat{{ forloop.counter }}" value="{{key}}" />
+            <label data-variant="{{key}}" class="pproduct-block-items__label" for="mat{{ forloop.counter }}">{{material}}</label>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="pproduct-right__block pproduct-block"> 
+        <span class="pproduct-block__title">Цвет:</span>
+        <div class="pproduct-block-items">
+            {% for key, color in product.colors.items %}
+            <input class="pproduct-block-items__input" type="radio" name="color" {% if color == product.choosen_color %} checked="checked" {% endif %} id="color{{ forloop.counter }}" value="{{key}}" />
+            <label data-variant="{{key}}" class="pproduct-block-items__label square" for="color{{ forloop.counter }}">
+                <div class="color" style="background-color: #{{color}};"></div>
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="pproduct-right-btns"> <button class="btn pproduct-right-btns__addToCart add-cart" variant-id="123">Добавить
+            в корзину</button>
+            <button class="btn pproduct-right-btns__addToFavorite fav-btn" item-id="123">
+            <img src="../../static/icons/heart.svg" class="disabled" alt />
+            <img src="../../static/icons/heartFilled.svg" class="enabled" alt />
+        </button></div>
+    <div class="pproduct-description"> 
+        <span class="pproduct-description__title">Описание:</span>
+        {{product.description}}    
+    </div>
+    <div class="pproduct-tabs tabs">
+        <div class="tabs__item pproduct-tabs__item active" data-tab-base="productInfo" data-tab-val="1">
+            Доставка</div>
+        <div class="tabs__item pproduct-tabs__item" data-tab-base="productInfo" data-tab-val="2">Оплата
+        </div>
+        <div class="tabs__item pproduct-tabs__item" data-tab-base="productInfo" data-tab-val="3">Возврат
+        </div>
+    </div>
+    <div class="pproduct-tabs-content tab-content active" data-tab-base="productInfo" data-tab-val="1">Lorem
+        ipsum
+        dolor sit amet consectetur adipisicing elit. Quae
+        tenetur nihil consequatur voluptatibus reprehenderit,
+        quos ducimus vel harum quas veniam!</div>
+    <div class="pproduct-tabs-content tab-content" data-tab-base="productInfo" data-tab-val="2">ectetur
+        adipisicing elit. Quae tenetur nihil consequatur
+        voluptatibus reprehenderit, quos ducimus vel harum quas
+        veniam!</div>
+    <div class="pproduct-tabs-content tab-content" data-tab-base="productInfo" data-tab-val="3">333Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Quae
+        tenetur nihil consequatur voluptatibus reprehenderit,
+        quos ducimus vel harum quas
+        veniam!</div>
+</div>

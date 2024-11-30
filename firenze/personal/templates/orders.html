@@ -6,11 +6,29 @@
 {% endblock styles %}
 
 {% block content %}
+
+<!-- class: order-status-{ItemId} -->
+<div class="modal overlayContent order-status order-status-1">
+    <div class="modal__close close-overlays"> <img class="modal__close-img" src="{% static 'icons/cross.svg' %}" alt />
+    </div>
+    <div class="order-status__title">Информация о заказе №123-43221</div>
+    <div class="order-status__info">Общая сумма заказа: 15 999 ₽</div>
+    <div class="order-status__info">Статус: Оплачен</div>
+    <div class="order-status__info">Дата оформления: 12.09.2024 14:35</div>
+    <div class="order-status__info">Адрес доставки: Ул.ю Тверская д.18 кв. 32</div>
+    <div class="order-status__images">
+        <img src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt="" class="order-status__images-item">
+        <img src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt="" class="order-status__images-item">
+        <img src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt="" class="order-status__images-item">
+        <img src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt="" class="order-status__images-item">
+    </div>
+</div>
+
 <section class="lk-sec">
     <div class="container">
         <h1 class="lk__title page-title">аккаунт</h1>
         <div class="lk">
-            <div class="lk-panel"> 
+            <div class="lk-panel">
                 {% include 'personal_small_info.html'%}
                 {% include 'personal_menu.html' with active_page='orders' %}
             </div>
@@ -18,10 +36,27 @@
                 <div class="lk-orders">
                     <div class="status">
                         <div class="status-images"> <img class="status-images__img"
-                                src="../../pages/account/img/qwe.png" alt /><img class="status-images__img"
-                                src="../../pages/account/img/qwe.png" alt /><img class="status-images__img"
-                                src="../../pages/account/img/qwe.png" alt /><img class="status-images__img"
-                                src="../../pages/account/img/qwe.png" alt /></div>
+                                src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt /><img
+                                class="status-images__img" src="{% static 'oldFrontPages/account/img/qwe.png' %}"
+                                alt /><img class="status-images__img"
+                                src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt /><img
+                                class="status-images__img" src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt />
+                        </div>
+                        <div class="status-content">
+                            <div class="status-content__status">В обработке
+                                - оплачен</div>
+                            <div class="status-content__number">заказ
+                                #123</div>
+                            <div class="status-content__date">от
+                                08.08.24</div>
+                            <!-- data-modal: order-status-{ItemId} -->
+                        </div><button class="btn status__btn open-modal" data-modal="order-status-1">Подробнее</button>
+                    </div>
+                    <div class="status">
+                        <div class="status-images"> <img class="status-images__img"
+                                src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt /><img
+                                class="status-images__img" src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt />
+                        </div>
                         <div class="status-content">
                             <div class="status-content__status">В обработке
                                 - оплачен</div>
@@ -33,20 +68,7 @@
                     </div>
                     <div class="status">
                         <div class="status-images"> <img class="status-images__img"
-                                src="../../pages/account/img/qwe.png" alt /><img class="status-images__img"
-                                src="../../pages/account/img/qwe.png" alt /></div>
-                        <div class="status-content">
-                            <div class="status-content__status">В обработке
-                                - оплачен</div>
-                            <div class="status-content__number">заказ
-                                #123</div>
-                            <div class="status-content__date">от
-                                08.08.24</div>
-                        </div><button class="btn status__btn">Подробнее</button>
-                    </div>
-                    <div class="status">
-                        <div class="status-images"> <img class="status-images__img"
-                                src="../../pages/account/img/qwe.png" alt /></div>
+                                src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt /></div>
                         <div class="status-content">
                             <div class="status-content__status">В обработке
                                 - оплачен</div>

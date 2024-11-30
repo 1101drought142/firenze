@@ -1,12 +1,13 @@
-<div class="cart-item"> <img class="cart-item__img" src="./img/aaa3.jpg" alt="" />
+<div class="cart-item" product-id="111" variant-id="123"> <img class="cart-item__img" src="../../static/oldFrontPages/cart/img/aaa1.jpg" alt="" />
     <div class="cart-item-info">
         <div class="cart-item__title">Cloth item very long title with some description</div>
         <div class="cart-item__price">17 642 ₽</div>
     </div>
     <div class="cart-item__dropdown dropdown size">
         <div class="dropdown-name">Размер:</div>
+        <!-- data-val - по сути variant-id и есть -->
         <div class="dropdown__header" data-val="M"><img class="dropdown__header-arrow"
-                src="../../shared/icons/dropdownArrow.svg" /><span>m</span><input
+                src="../../static/icons/dropdownArrow.svg" /><span>m</span><input
                 class="dropdown__header-inp" type="text" value="M" /></div>
         <div class="dropdown-list">
             <div class="dropdown-list__item" data-val="S">S</div>
@@ -17,7 +18,7 @@
     <div class="cart-item__dropdown dropdown">
         <div class="dropdown-name">Цвет: </div>
         <div class="dropdown__header" data-val="green"><img class="dropdown__header-arrow"
-                src="../../shared/icons/dropdownArrow.svg" /><span>
+                src="../../static/icons/dropdownArrow.svg" /><span>
                 <div class="color">
                     <div style="background-color: #333f22"> </div>
                 </div>
@@ -40,5 +41,5 @@
             </div>
         </div>
     </div>
-    <div class="cart-item__remove"> <img src="./img/rem.svg" alt="" /></div>
+    <div class="cart-item__remove"> <img src="../../static/icons/rem.svg" alt="" /></div>
 </div>

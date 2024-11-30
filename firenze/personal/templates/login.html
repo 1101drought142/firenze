@@ -9,7 +9,7 @@
 {% block content %}
 <section class="auth-sec">
     <div class="container">
-        <form class="auth">
+        <form class="auth loginForm">
             <h1 class="auth__title">вход</h1>
             <p class="auth-choice__title">Выберите способ авторизации</p>
             <div class="auth-choice">
@@ -19,18 +19,18 @@
             </div><span class="tab-content active" data-tab-base="loginChoice" data-tab-val="1">
                 <div class="input phoneInput">
                     <div class="input__title">Номер телефона*</div><input class="input__field" type="text"
-                        placeholder="+7" />
+                        placeholder="+7" name="phone" />
                     <div class="input__error">Введите корректное значение!</div>
                 </div>
             </span><span class="tab-content" data-tab-base="loginChoice" data-tab-val="2">
                 <div class="input mailInput">
                     <div class="input__title">Почта*</div><input class="input__field" type="mail"
-                        placeholder="adam@adam.adam" />
+                        placeholder="adam@adam.adam" name="mail" />
                     <div class="input__error">Почта введена некорректно</div>
                 </div>
             </span>
             <div class="input passwordInput">
-                <div class="input__title">Пароль*</div><input class="input__field" type="password" placeholder="Password" />
+                <div class="input__title">Пароль*</div><input class="input__field" type="password" name="password" placeholder="Password" />
                 <div class="input__error">Введите корректное значение!</div>
             </div><button class="btn black auth__login">Войти</button><a
                 class="btn auth__btn auth__goSignUp">Зарегистрироваться </a><a

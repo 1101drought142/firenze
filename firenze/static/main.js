@@ -2,6 +2,7 @@
 const showSnack = (classname) => {
   const snack = document.querySelector(`.${classname}`);
 
+  document.querySelectorAll('.snack').forEach(sn => sn.classList.remove('active'));
   snack.classList.add('active')
   setTimeout(() => {
     snack.classList.remove('active')
@@ -9,6 +10,7 @@ const showSnack = (classname) => {
 }
 
 const showBaseSnackWithText = (text) => {
+  document.querySelectorAll('.snack').forEach(sn => sn.classList.remove('active'));
   const snack = document.querySelector('.base-snack');
   const snackTextField = snack.querySelector('.base-snack-content');
   snackTextField.textContent = text;
@@ -24,9 +26,14 @@ const checkRequiredFields = (form) => {
   let hasError = false;
   requiredFields.forEach(field => {
     if (field.value.length < 3) {
-      hasError = true;
+      console.log('wait');
+      if (!field.closest('.tab-content:not(.active)')) {
+        console.log('suc', field.closest('.tab-content:not(.active)'));
+        hasError = true;
+      }
     }
   })
+
   if (hasError) {
     showBaseSnackWithText('Ошибка! Заполните все обязательные поля');
     return true;
@@ -98,17 +105,26 @@ modalBtns.forEach(btn => {
   })
 })
 
+// search
+const searchBtns = document.querySelectorAll('.open-search');
+const searchMenu = document.querySelector('.search-menu');
+searchBtns.forEach(btn => {
+  btn.onclick = () => {
+    searchMenu.classList.add('active');
+  }
+})
+const searchMenuClose = document.querySelector('.search-menu__close');
+searchMenuClose.onclick = () => {
+  searchMenu.classList.remove('active');
+}
+// /search
 
 
-
-
-
-
-const favBtns = document.querySelectorAll('.fav-btn');
-
-favBtns.forEach(fav => {
-
-  fav.onclick = async (e) => {
+// favorites
+body.addEventListener('click', async (e) => {
+  if (e.target.closest('.fav-btn')) {
+    const fav = e.target.closest('.fav-btn');
+    
     e.preventDefault();
     // promise callback
     const itemId = fav.getAttribute('item-id');
@@ -117,6 +133,11 @@ favBtns.forEach(fav => {
       if (res.success) {
         showSnack('fav-removed');
         fav.classList.remove('active');
+
+        if (e.target.closest('.lk-favs')) {
+          e.target.closest('.product').remove();
+        }
+
       } else {
         showSnack('error-snack');
       }
@@ -129,29 +150,35 @@ favBtns.forEach(fav => {
         showSnack('error-snack');
       }
     }
-  }
 
+  }
 })
 
 
 
 // Add product
 
-const addProductBtns = document.querySelectorAll('.product__addToCard');
-addProductBtns.forEach(btn => {
-  btn.addEventListener('click', async (e) => {
+body.addEventListener('click', async (e) => {
+  if (e.target.closest('.add-cart')) {
+    const btn = e.target.closest('.add-cart');
+
     e.preventDefault();
     e.stopPropagation();
-    const productId = btn.closest('.product').getAttribute('variant-id');
-
+    let productId;
+    if (btn.closest('.product')) {
+      productId = btn.closest('.product').getAttribute('variant-id');
+    } else {
+      btn.getAttribute('variant-id');
+    }
+    
     const res = await PublicAPI.addToCart(productId);
     console.log(res.success);
     if (res.success) {
       showSnack('add-success');
     } else {
-      showSnack('error-snack');
+      showSnack(res.message);
     }
-  })
+  }
 })
 
 //  Add product end

@@ -16,3 +16,4 @@ class FilterSerializer(serializers.Serializer):
 
 class ChangeProdutTypeRequest(serializers.Serializer):
     variant_id = serializers.IntegerField()
+    product_id = serializers.IntegerField()

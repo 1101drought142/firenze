@@ -47,3 +47,34 @@
 
   }
 })();
+
+
+const filterBtnAccept = document.querySelector('.filter-btns__accept');
+const filterSortBtnAccept = document.querySelector('#sortAccept');
+const catalog = document.querySelector('.catalog');
+const formParams = document.querySelector('.filter-params');
+const formSort = document.querySelector('.filter-sort');
+filterBtnAccept.onclick = async (e) => {
+  e.preventDefault();
+  const formData = new FormData(formParams);
+  const sortData = new FormData(formSort);
+
+  for (let pair of sortData.entries()) {
+    formData.append(pair[0], pair[1]);
+  }
+
+  const res = await PublicAPI.filter(formData);
+  catalog.innerHTML = res;
+}
+filterSortBtnAccept.onclick = async (e) => {
+  e.preventDefault();
+  const formData = new FormData(formParams);
+  const sortData = new FormData(formSort);
+
+  for (let pair of sortData.entries()) {
+    formData.append(pair[0], pair[1]);
+  }
+
+  const res = await PublicAPI.filter(formData);
+  catalog.innerHTML = res;
+}

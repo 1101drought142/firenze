@@ -37,16 +37,16 @@
     </div>
 
     <div class="burger-menu">
-        <a href="/" class="burger-menu__item category">Каталог</a>
+        <a href="/catalog/" class="burger-menu__item category">Каталог</a>
         <a href="/" class="burger-menu__item category">Клиентам</a>
-        <a href="/" class="burger-menu__item">Правила оформления заказов</a>
-        <a href="/" class="burger-menu__item">Оплата</a>
-        <a href="/" class="burger-menu__item">Доставка</a>
-        <a href="/" class="burger-menu__item">Обмен и возврат</a>
+        <a href="/shipping/" class="burger-menu__item">Правила оформления заказов</a>
+        <a href="/payment/" class="burger-menu__item">Оплата</a>
+        <a href="/shipping/" class="burger-menu__item">Доставка</a>
+        <a href="/shipping/" class="burger-menu__item">Обмен и возврат</a>
         <a href="/" class="burger-menu__item category">Мир antonelli firenze</a>
-        <a href="/" class="burger-menu__item">О бренде</a>
-        <a href="/" class="burger-menu__item">Магазины</a>
-        <a href="/" class="burger-menu__item">Новости</a>
+        <a href="/return/" class="burger-menu__item">О бренде</a>
+        <a href="/shops/" class="burger-menu__item">Магазины</a>
+        <a href="/news/" class="burger-menu__item">Новости</a>
         <a href="/" class="burger-menu__item">Контакты</a>
     </div>
 
@@ -85,26 +85,26 @@
         <div class="container">
             <div class="header">
                 <div class="header-actions mob">
-                    <div class="header-actions__item header-actions__item--search mob"><img
+                    <div class="header-actions__item header-actions__item--search mob open-search"><img
                             class="header-actions__item-img" src="{% static 'icons/search.svg' %}" /></div>
                     <div class="header-actions__item header-burger burger-btn">
                         <img class="header-actions__item-img opener" src="{% static 'icons/burger.svg' %}" />
                         <img class="header-actions__item-img closer" src="{% static 'icons/burgerClose.svg' %}" />
                     </div>
-                </div><a class="header__logo" href="./"><img class="header__logo-img"
+                </div><a class="header__logo" href="/"><img class="header__logo-img"
                         src="{% static 'icons/logo.svg' %}" /></a>
-                <div class="header__list"> <a class="header__list-item" href="./">Каталог</a><a
+                <div class="header__list"> <a class="header__list-item" href="/catalog/">Каталог</a><a
                         class="header__list-item" href="./">Мир Antonelli Firenze</a><a class="header__list-item"
                         href="./">Клиентам</a></div>
                 <div class="header-actions">
-                    <div class="header-actions__item header-actions__item--search desk"><img
+                    <div class="header-actions__item header-actions__item--search desk open-search"><img
                             class="header-actions__item-img" src="{% static 'icons/search.svg' %}" /></div>
-                    <div class="header-actions__item header-actions__item--heart"><img class="header-actions__item-img"
-                            src="{% static 'icons/heart.svg' %}" /></div>
-                    <div class="header-actions__item header-actions__item--user"><img class="header-actions__item-img"
-                            src="{% static 'icons/user.svg' %}" /></div>
-                    <div class="header-actions__item header-actions__item--cart"><img class="header-actions__item-img"
-                            src="{% static 'icons/cart.svg' %}" /></div>
+                    <a href="/favourites/" class="header-actions__item header-actions__item--heart"><img class="header-actions__item-img"
+                            src="{% static 'icons/heart.svg' %}" /></a>
+                    <a href="/account/" class="header-actions__item header-actions__item--user"><img class="header-actions__item-img"
+                            src="{% static 'icons/user.svg' %}" /></a>
+                    <a href="/cart/" class="header-actions__item header-actions__item--cart"><img class="header-actions__item-img"
+                            src="{% static 'icons/cart.svg' %}" /></a>
                 </div>
             </div>
         </div>
@@ -119,22 +119,26 @@
     <div class="container">
         <div class="footer">
             <div class="footer-left">
-                <a class="footer__logo" href="./"> <img class="footer__logo-img" src="../../shared/icons/logo.svg"
+                <a class="footer__logo" href="/"> <img class="footer__logo-img" src="../../shared/icons/logo.svg"
                         alt /></a>
                 <div class="footer-links">
                     <div class="footer-links__list">
                         <a class="footer-links__list-item" href>
                             <b>Каталог</b></a>
                     </div>
-                    <div class="footer-links__list"> <a class="footer-links__list-item" href> <b>Мир
-                                Antonelli firenze</b></a><a class="footer-links__list-item" href>О
-                            бренде</a><a class="footer-links__list-item" href>Магазины</a><a
-                            class="footer-links__list-item" href>Новости</a><a class="footer-links__list-item"
+                    <div class="footer-links__list"> 
+                        <a class="footer-links__list-item" href> <b>Мир
+                                Antonelli firenze</b></a>
+                                <a class="footer-links__list-item" href="/return">О
+                            бренде</a><a class="footer-links__list-item" href="/shops">Магазины</a>
+                            <a
+                            class="footer-links__list-item" href="/news/">Новости</a><a class="footer-links__list-item"
                             href>Контакты</a></div>
-                    <div class="footer-links__list"> <a class="footer-links__list-item" href>
+                    <div class="footer-links__list">
+                         <a class="footer-links__list-item" href>
                             <b>Клиентам</b></a><a class="footer-links__list-item" href>Правила
                             оформления заказов</a><a class="footer-links__list-item" href>Оплата</a><a
-                            class="footer-links__list-item" href>Доставка</a><a class="footer-links__list-item"
+                            class="footer-links__list-item" href="/shipping/">Доставка</a><a class="footer-links__list-item"
                             href>Обмен и
                             возврат</a></div>
                 </div>

@@ -236,4 +236,10 @@
   text-align: right;
   padding-right: 8px;
   font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .filter {
+    width: 100%;
+  }
 }/*# sourceMappingURL=catalog.css.map */

@@ -14,7 +14,7 @@
                 {% include 'personal_small_info.html'%}
                 {% include 'personal_menu.html' with active_page='account' %}
             </div>
-            <div class="lk-content">
+            <form class="lk-content">
                 <div class="lk-info__title">персональная информация </div>
                 <div class="lk-info">
                     <div class="input textInput">
@@ -46,18 +46,18 @@
                 <div class="lk-info__title">Сменить пароль</div>
                 <div class="lk-info">
                     <div class="input passwordInput">
-                        <div class="input__title">Старый пароль</div><input class="input__field" type="password"
+                        <div class="input__title">Старый пароль</div><input class="input__field firstPass" type="password"
                             placeholder="*********" />
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                     <div class="input passwordInput">
-                        <div class="input__title">Новый пароль</div><input class="input__field" type="password"
+                        <div class="input__title">Новый пароль</div><input class="input__field confPass" type="password"
                             placeholder="password" />
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                 </div>
                 <div class="btn black lk__save">Сохранить изменения</div>
-            </div>
+            </form>
         </div>
     </div>
 </section>
