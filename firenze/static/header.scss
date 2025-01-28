@@ -39,6 +39,46 @@
   }
 }
 
+.header__list-item {
+  &.dropdown-item {
+    display: inline;
+    position: relative;
+    z-index: 90;
+    cursor:default;
+    &:hover {
+      opacity: 1 !important;
+      
+    }
+    &:hover .dropdown-item-list {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  & .dropdown-item {
+    &-list {
+      background: #fff;
+      z-index: 9999;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 100%;
+      min-width: max-content;
+      transition: opacity .3s ease;
+      transform: translateY(-1000px);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+      border: 1px solid rgba($color: #000000, $alpha: 0.1);
+      &__item {
+        margin: 3px 0px;
+        color: #000;
+
+      }
+    }
+  }
+}
+
 .header-actions.mob {
   display: none;
 }

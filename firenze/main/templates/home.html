@@ -28,68 +28,25 @@
             </div>
         </div>
         <div class="elegancy">
-            <div class="elegancy-left"> <a class="product" href  item-id="123" variant-id="222"><img class="product__image"
-                        src="{% static 'oldShared/img/product.png' %}" alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999 ₽</p>
-                    </div>
-                </a><a class="product" href  item-id="123" variant-id="222"><img class="product__image" src="{% static 'oldShared/img/product.png' %}" alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999 ₽</p>
-                    </div>
-                </a><a class="product" href  item-id="123" variant-id="222"><img class="product__image" src="{% static 'oldShared/img/product.png' %}" alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999 ₽</p>
-                    </div>
-                </a><a class="product" href  item-id="123" variant-id="222"><img class="product__image" src="{% static 'oldShared/img/product.png' %}" alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999
-                            ₽</p>
-                    </div>
-                </a></div><a class="elegancy-big" href><img class="elegancy-big__img" src="{% static 'oldFrontPages/home/img/big.png' %}"
-                    alt />
-                <div class="elegancy-big__price">1 999 ₽ </div>
-                <div class="elegancy-big__title">Name
-                    Clothes</div>
+            <div class="elegancy-left"> 
+                
+                {% for product in show_on_main %}
+                {% include 'elegancy_list.html'%}
+                {% endfor %}
+            </div>
+                
+            <a class="elegancy-big" href="/product/{{big_picture.id}}/">
+                <img class="elegancy-big__img" src="{{big_picture.photo.url}}" alt />
+                <div class="elegancy-big__price">{{big_picture.price}} ₽ </div>
+                <div class="elegancy-big__title">{{big_picture.name}}</div>
             </a>
         </div>
         <div class="elegancy-mob">
-            <div class="swiper-wrapper"> <a class="swiper-slide product" href  item-id="123" variant-id="222"><img class="product__image"
-                        src="{% static 'oldShared/img/product.png' %}" alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999 ₽</p>
-                    </div>
-                </a><a class="swiper-slide product" href  item-id="123" variant-id="222"><img class="product__image" src="{% static 'oldShared/img/product.png' %}"
-                        alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999 ₽</p>
-                    </div>
-                </a><a class="swiper-slide product" href  item-id="123" variant-id="222"><img class="product__image" src="{% static 'oldShared/img/product.png' %}"
-                        alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999 ₽</p>
-                    </div>
-                </a><a class="swiper-slide product" href  item-id="123" variant-id="222"><img class="product__image" src="{% static 'oldShared/img/product.png' %}"
-                        alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999 ₽</p>
-                    </div>
-                </a><a class="swiper-slide product" href  item-id="123" variant-id="222"><img class="product__image" src="{% static 'oldShared/img/product.png' %}"
-                        alt />
-                    <div class="product-content">
-                        <div class="product__title">Name Clothes</div>
-                        <p class="product__price">1 999
-                            ₽</p>
-                    </div>
-                </a></div>
+            <div class="swiper-wrapper"> 
+                {% for product in show_on_main %}
+                {% include 'elegancy_list_mob.html'%}
+                {% endfor %}
+            </div>
         </div>
         <div class="elegancy-bottom">
             <h2 class="elegancy-bottom__title">Элегантность и
@@ -107,14 +64,11 @@
 <section class="categories-sec">
     <div class="container">
         <h2 class="sec-title">Каталог</h2>
-        <div class="categories"> <a class="categories__item" href="/catalog/"><img class="categories__item-img"
-                    src="{% static 'oldFrontPages/home/img/category.png' %}" alt />
-                <div class="categories__item-title">Category Name</div>
-            </a><a class="categories__item" href="/catalog/"><img class="categories__item-img"
-                    src="{% static 'oldFrontPages/home/img/category.png' %}" alt />
-                <div class="categories__item-title">Category
-                    Name</div>
-            </a></div>
+        <div class="categories"> 
+            {% for category in collections %}
+                {% include 'categories_list.html'%}
+            {% endfor %}
+        </div>
     </div>
 </section>
 

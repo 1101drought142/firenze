@@ -10,10 +10,11 @@ class FilterSerializer(serializers.Serializer):
     color = serializers.IntegerField()
     min_price = serializers.IntegerField()
     max_price = serializers.IntegerField()
-
+    current_page = serializers.IntegerField()
     order_by = serializers.CharField(required=False)
     order = serializers.CharField(required=False)
 
 class ChangeProdutTypeRequest(serializers.Serializer):
     variant_id = serializers.IntegerField()
     product_id = serializers.IntegerField()
+  

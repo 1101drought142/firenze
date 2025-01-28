@@ -11,11 +11,15 @@
     <div class="container">
         <div class="thanks">
             <h1 class="page-title thanks__title">Спасибо за заказ!</h1>
-            <p class="thanks__text">Ваш заказу спешно оформлен!<br>За статусом заказа можно следить в <a
-                    href="./">личном кабинете</a></p>
-            <div class="thanks__num">Номер вашего заказа: <br> 321-4234-12</div>
+            <p class="thanks__text">Ваш заказу спешно оформлен!<br>
+                {% if request.user.is_authenticated  %}
+                За статусом заказа можно следить в 
+                <a href="/account/">личном кабинете</a>
+                {% endif %}
+            </p>
+            <div class="thanks__num">Номер вашего заказа: <br> {{id}}</div>
             <div class="thanks__support">Номер поддержки:<br><a href="tel:88008001010">8 800 888 88 88</a></div><a
-                class="btn thanks__back" href="./">На главную</a>
+                class="btn thanks__back" href="/">На главную</a>
         </div>
     </div>
 </section>

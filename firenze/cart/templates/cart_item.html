@@ -1,18 +1,20 @@
-<div class="cart-item" product-id="111" variant-id="123"> <img class="cart-item__img" src="../../static/oldFrontPages/cart/img/aaa1.jpg" alt="" />
+<div class="cart-item" product-id="{{cart_item.product.variant_id}}" variant-id="{{cart_item.product.variant_id}}"> 
+    <img class="cart-item__img" src="{{cart_item.product.variant_photo_url}}" alt="" />
     <div class="cart-item-info">
-        <div class="cart-item__title">Cloth item very long title with some description</div>
-        <div class="cart-item__price">17 642 ₽</div>
+        <!-- Прокинуть ссылку на товар -->
+        <a class="cart-item__title" href="/product/{{cart_item.product.id}}/">{{cart_item.product.name}}</a>
+        <div class="cart-item__price">{{cart_item.product.variant_price}} ₽</div>
     </div>
     <div class="cart-item__dropdown dropdown size">
         <div class="dropdown-name">Размер:</div>
         <!-- data-val - по сути variant-id и есть -->
         <div class="dropdown__header" data-val="M"><img class="dropdown__header-arrow"
-                src="../../static/icons/dropdownArrow.svg" /><span>m</span><input
-                class="dropdown__header-inp" type="text" value="M" /></div>
+                src="../../static/icons/dropdownArrow.svg" /><span>{{cart_item.product.choosen_size}}</span><input
+                class="dropdown__header-inp" type="text" value="{{cart_item.product.choosen_size}}" /></div>
         <div class="dropdown-list">
-            <div class="dropdown-list__item" data-val="S">S</div>
-            <div class="dropdown-list__item" data-val="M">M</div>
-            <div class="dropdown-list__item" data-val="L">L</div>
+            {% for key, size in cart_item.product.sizes.items %}
+                <div class="dropdown-list__item" data-val="{{key}}">{{size}}</div>
+            {% endfor %}
         </div>
     </div>
     <div class="cart-item__dropdown dropdown">
@@ -20,25 +22,17 @@
         <div class="dropdown__header" data-val="green"><img class="dropdown__header-arrow"
                 src="../../static/icons/dropdownArrow.svg" /><span>
                 <div class="color">
-                    <div style="background-color: #333f22"> </div>
+                    <div style="background-color: #{{cart_item.product.choosen_color}}"> </div>
                 </div>
-            </span><input class="dropdown__header-inp" type="text" value="green" /></div>
+            </span><input class="dropdown__header-inp" type="text" value="{{cart_item.product.choosen_color}}" /></div>
         <div class="dropdown-list">
-            <div class="dropdown-list__item" data-val="green">
-                <div class="color">
-                    <div style="background-color: #3f0f22"> </div>
+            {% for key, color in cart_item.product.colors.items %}
+                <div class="dropdown-list__item" data-val="{{key}}">
+                    <div class="color">
+                        <div style="background-color: #{{color}}"> </div>
+                    </div>
                 </div>
-            </div>
-            <div class="dropdown-list__item" data-val="red">
-                <div class="color">
-                    <div style="background-color: #ff0000"> </div>
-                </div>
-            </div>
-            <div class="dropdown-list__item" data-val="anyother">
-                <div class="color">
-                    <div style="background-color: #00ff88"> </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="cart-item__remove"> <img src="../../static/icons/rem.svg" alt="" /></div>

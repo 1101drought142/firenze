@@ -107,6 +107,28 @@
   }
 }
 
+.forgotForm {
+  width: 700px;
+}
+
+.forgotForm .auth-choice__title {
+  text-align: center;
+}
+.forgot__goAuth {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  &.active {
+    display: flex;
+  }
+}
+.auth__forgotRequest {
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+
 @media (max-width: 640px) {
   .auth {
     width: 100% !important;
@@ -122,4 +144,9 @@
   .auth-choice__item {
     font-size: 12px;
   }
+}
+
+// костыль
+.auth-choice__item {
+  width: 100%;
 }

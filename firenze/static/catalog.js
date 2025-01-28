@@ -58,6 +58,8 @@ filterBtnAccept.onclick = async (e) => {
   e.preventDefault();
   const formData = new FormData(formParams);
   const sortData = new FormData(formSort);
+  const page = catalog.getAttribute('current-page');
+  formData.append('page', 1);
 
   for (let pair of sortData.entries()) {
     formData.append(pair[0], pair[1]);
@@ -70,6 +72,8 @@ filterSortBtnAccept.onclick = async (e) => {
   e.preventDefault();
   const formData = new FormData(formParams);
   const sortData = new FormData(formSort);
+  const page = catalog.getAttribute('current-page');
+  formData.append('page', 1);
 
   for (let pair of sortData.entries()) {
     formData.append(pair[0], pair[1]);
@@ -78,3 +82,22 @@ filterSortBtnAccept.onclick = async (e) => {
   const res = await PublicAPI.filter(formData);
   catalog.innerHTML = res;
 }
+
+window.addEventListener('click', async (e) => {
+  if (e.target.closest('.pagination__item') || e.target.closest('.pagination__btn')) {
+    const item = e.target.closest('.pagination__item') || e.target.closest('.pagination__btn');
+
+    const page = item.getAttribute('data-page');
+    const formData = new FormData(formParams);
+    formData.append('page', page);
+    const sortData = new FormData(formSort);
+
+    for (let pair of sortData.entries()) {
+      formData.append(pair[0], pair[1]);
+    }
+
+    const res = await PublicAPI.filter(formData);
+    catalog.innerHTML = res;
+  }
+  
+})

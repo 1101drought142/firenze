@@ -14,77 +14,26 @@
         </div>
     </div>
 </section>
+{% for key, shop in shops.items %}
 <section class="shops-sec">
     <div class="container">
-        <h2 class="shops__title sec-title">Магазины</h2>
+        <h2 class="shops__title sec-title">{{key}}</h2>
         <div class="shops">
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
+            {% for s in shop %}
+            <div class="shops-item"> 
+                {% if s.photo %}
+                <img class="shops-item__img" src="{{s.photo.url}}" alt="" />
+                {% endif %}
+                <div class="shops-item__title">{{s.name}} </div>
+                <div class="shops-item__place">{{s.adress}}</div>
+                <a class="shops-item__phone" href="tel:{{s.phone}}">{{s.phone}}</a>
             </div>
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem2.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
-<section class="shops-sec">
-    <div class="container">
-        <h2 class="shops__title sec-title">аутлеты</h2>
-        <div class="shops">
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem2.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem2.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem2.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="shops-sec">
-    <div class="container">
-        <h2 class="shops__title sec-title">корнеры</h2>
-        <div class="shops">
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem2.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem2.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
-            <div class="shops-item"> <img class="shops-item__img" src="{% static 'oldFrontPages/shops/img/shopItem.jpg' %}" alt="" />
-                <div class="shops-item__title">name storE </div>
-                <div class="shops-item__place">Ул. пушкина, д. 50, 2 этаж</div><a class="shops-item__phone"
-                    href="tel:88009991010">8 800 999 99 99</a>
-            </div>
-        </div>
-    </div>
-</section>
+{% endfor %}
+
 
 {% include 'telegram.html'  %}
 

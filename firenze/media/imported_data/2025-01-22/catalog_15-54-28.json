@@ -1,0 +1,1087 @@
+{
+    "test1c": "0.9",
+    "products": [
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "52",
+                        "sizeRU": "54",
+                        "sizeINT": "4XL"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 2,
+                    "sezon": "ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "БЛУЗКА BACIO",
+                "article": "M2314 152B 020 BACIO",
+                "group": "Блузка",
+                "nameModel": "BACIO",
+                "codeModel": "M2314",
+                "codeColor": "020",
+                "nameColor": "БЕЛЫЙ",
+                "codeMaterial": "152B",
+                "composition": "100% ХЛОПОК",
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ШР ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "БРЮКИ CRATI",
+                "article": "M1389 870C 121 CRATI",
+                "group": "Брюки",
+                "nameModel": "CRATI",
+                "codeModel": "M1389",
+                "codeColor": "121",
+                "nameColor": null,
+                "codeMaterial": "870C",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "44",
+                        "sizeRU": "46",
+                        "sizeINT": "L"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "БРЮКИ RUBINO",
+                "article": "H8227K 859C 126 RUBINO",
+                "group": "Брюки",
+                "nameModel": "RUBINO",
+                "codeModel": "H8227K",
+                "codeColor": "126",
+                "nameColor": null,
+                "codeMaterial": "859C",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "44",
+                        "sizeRU": "46",
+                        "sizeINT": "L"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                },
+                {
+                    "size": {
+                        "sizeIT": "46",
+                        "sizeRU": "48",
+                        "sizeINT": "XL"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "БРЮКИ RUBINO",
+                "article": "H8227K 859C 903 RUBINO",
+                "group": "Брюки",
+                "nameModel": "RUBINO",
+                "codeModel": "H8227K",
+                "codeColor": "903",
+                "nameColor": null,
+                "codeMaterial": "859C",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "48",
+                        "sizeRU": "50",
+                        "sizeINT": "XXL"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "СТОК ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "БРЮКИ TABITA",
+                "article": "E8451K 640B 371 TABITA",
+                "group": "Брюки",
+                "nameModel": "TABITA",
+                "codeModel": "E8451K",
+                "codeColor": "371",
+                "nameColor": null,
+                "codeMaterial": "640B",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "40",
+                        "sizeRU": "42",
+                        "sizeINT": "S"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "КУРТКА GORDON",
+                "article": "K3934 364C 116 GORDON",
+                "group": "Куртка",
+                "nameModel": "GORDON",
+                "codeModel": "K3934",
+                "codeColor": "116",
+                "nameColor": null,
+                "codeMaterial": "364C",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "КУРТКА GRANA",
+                "article": "M3041 8968 230 GRANA",
+                "group": "Куртка",
+                "nameModel": "GRANA",
+                "codeModel": "M3041",
+                "codeColor": "230",
+                "nameColor": null,
+                "codeMaterial": "8968",
+                "composition": "100%КОЖА",
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "38",
+                        "sizeRU": "40",
+                        "sizeINT": "XS"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 24/25"
+                },
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "КУРТКА HONOLULU",
+                "article": "M7394 857C 223 HONOLULU",
+                "group": "Куртка",
+                "nameModel": "HONOLULU",
+                "codeModel": "M7394",
+                "codeColor": "223",
+                "nameColor": null,
+                "codeMaterial": "857C",
+                "composition": "100% ШЕРСТЬ",
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": "NR",
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 3,
+                    "sezon": "ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "ОЖЕРЕЛЬЕ CECILIA",
+                "article": "M0417 9806 988 CECILIA",
+                "group": "Бижутерия",
+                "nameModel": "CECILIA",
+                "codeModel": "M0417",
+                "codeColor": "988",
+                "nameColor": null,
+                "codeMaterial": "9806",
+                "composition": "100%ЛАТУНЬ",
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": "NR",
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 3,
+                    "sezon": "ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "ОЖЕРЕЛЬЕ VALENTINA",
+                "article": "M0418 9803 908 VALENTINA",
+                "group": "Бижутерия",
+                "nameModel": "VALENTINA",
+                "codeModel": "M0418",
+                "codeColor": "908",
+                "nameColor": null,
+                "codeMaterial": "9803",
+                "composition": "100%СТЕКЛО",
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "48",
+                        "sizeRU": "50",
+                        "sizeINT": "XXL"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "ПАЛЬТО GIOVE",
+                "article": "K7936 367C 223 GIOVE",
+                "group": "Пальто",
+                "nameModel": "GIOVE",
+                "codeModel": "K7936",
+                "codeColor": "223",
+                "nameColor": null,
+                "codeMaterial": "367C",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "40",
+                        "sizeRU": "42",
+                        "sizeINT": "S"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                },
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "ПАЛЬТО GRAND MARNIER",
+                "article": "H7891K 364C 110 GRAND MARNIER",
+                "group": "Пальто",
+                "nameModel": "GRAND MARNIER",
+                "codeModel": "H7891K",
+                "codeColor": "110",
+                "nameColor": null,
+                "codeMaterial": "364C",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "40",
+                        "sizeRU": "42",
+                        "sizeINT": "S"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                },
+                {
+                    "size": {
+                        "sizeIT": "40",
+                        "sizeRU": "42",
+                        "sizeINT": "S"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                },
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 2,
+                    "sezon": "ЗИМА 23/24"
+                },
+                {
+                    "size": {
+                        "sizeIT": "44",
+                        "sizeRU": "46",
+                        "sizeINT": "L"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                },
+                {
+                    "size": {
+                        "sizeIT": "44",
+                        "sizeRU": "46",
+                        "sizeINT": "L"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "ПЛАТЬЕ TARQUINIA",
+                "article": "41143K 01934 20363 TARQUINIA",
+                "group": "Платье",
+                "nameModel": "TARQUINIA",
+                "codeModel": "41143K",
+                "codeColor": "20363",
+                "nameColor": null,
+                "codeMaterial": "01934",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "46",
+                        "sizeRU": "48",
+                        "sizeINT": "XL"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "ПОЛУПАЛЬТО ELTON",
+                "article": "K3214 865C 999 ELTON",
+                "group": "Полупальто",
+                "nameModel": "ELTON",
+                "codeModel": "K3214",
+                "codeColor": "999",
+                "nameColor": null,
+                "codeMaterial": "865C",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": "40",
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "СТАРОЕ"
+                }
+            ],
+            "strProduct": {
+                "name": "ПОНЧО ASPERULA",
+                "article": "A40307 02050 20100 ASPERULA",
+                "group": "Верхняя одежда",
+                "nameModel": "ASPERULA",
+                "codeModel": "A40307",
+                "codeColor": "20100",
+                "nameColor": null,
+                "codeMaterial": "02050",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "44",
+                        "sizeRU": "46",
+                        "sizeINT": "L"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                },
+                {
+                    "size": {
+                        "sizeIT": "46",
+                        "sizeRU": "48",
+                        "sizeINT": "XL"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "СВИТЕР AREZZO",
+                "article": "41128K 01934 20901 AREZZO",
+                "group": "Свитер",
+                "nameModel": "AREZZO",
+                "codeModel": "41128K",
+                "codeColor": "20901",
+                "nameColor": null,
+                "codeMaterial": "01934",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "40",
+                        "sizeRU": "42",
+                        "sizeINT": "S"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "СВИТЕР AREZZO",
+                "article": "41128K 01934 7000 AREZZO",
+                "group": "Свитер",
+                "nameModel": "AREZZO",
+                "codeModel": "41128K",
+                "codeColor": "7000",
+                "nameColor": null,
+                "codeMaterial": "01934",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "40",
+                        "sizeRU": "42",
+                        "sizeINT": "S"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 24/25"
+                },
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 24/25"
+                },
+                {
+                    "size": {
+                        "sizeIT": "44",
+                        "sizeRU": "46",
+                        "sizeINT": "L"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 2,
+                    "sezon": "ЗИМА 24/25"
+                },
+                {
+                    "size": {
+                        "sizeIT": "46",
+                        "sizeRU": "48",
+                        "sizeINT": "XL"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 2,
+                    "sezon": "ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "СВИТЕР CHIMERA",
+                "article": "41350M 01729 20109 CHIMERA",
+                "group": "Свитер",
+                "nameModel": "CHIMERA",
+                "codeModel": "41350M",
+                "codeColor": "20109",
+                "nameColor": null,
+                "codeMaterial": "01729",
+                "composition": "77%ШЕРСТЬ 13%КАШЕМИР 10%МЕТАЛЛИЗИРОВАННОЕ ВОЛОКНО",
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "44",
+                        "sizeRU": "46",
+                        "sizeINT": "L"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                },
+                {
+                    "size": {
+                        "sizeIT": "46",
+                        "sizeRU": "48",
+                        "sizeINT": "XL"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "СВИТЕР OSTIA",
+                "article": "41139K 01934 8000 OSTIA",
+                "group": "Свитер",
+                "nameModel": "OSTIA",
+                "codeModel": "41139K",
+                "codeColor": "8000",
+                "nameColor": null,
+                "codeMaterial": "01934",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЗИМА 23/24"
+                }
+            ],
+            "strProduct": {
+                "name": "СВИТЕР VENOSA",
+                "article": "41161K 01934 20901 VENOSA",
+                "group": "Свитер",
+                "nameModel": "VENOSA",
+                "codeModel": "41161K",
+                "codeColor": "20901",
+                "nameColor": null,
+                "codeMaterial": "01934",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА KAL",
+                "article": "K0061L 8959 136 KAL",
+                "group": "Сумка",
+                "nameModel": "KAL",
+                "codeModel": "K0061L",
+                "codeColor": "136",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА KAL",
+                "article": "K0061L 8959 348 KAL",
+                "group": "Сумка",
+                "nameModel": "KAL",
+                "codeModel": "K0061L",
+                "codeColor": "348",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА KAL",
+                "article": "K0061L 8959 122 KAL",
+                "group": "Сумка",
+                "nameModel": "KAL",
+                "codeModel": "K0061L",
+                "codeColor": "122",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА KAL",
+                "article": "K0061L 8959 999 KAL",
+                "group": "Сумка",
+                "nameModel": "KAL",
+                "codeModel": "K0061L",
+                "codeColor": "999",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА WILLIAM",
+                "article": "L0583 8959 348 WILLIAM",
+                "group": "Сумка",
+                "nameModel": "WILLIAM",
+                "codeModel": "L0583",
+                "codeColor": "348",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА WILLIAM",
+                "article": "L0583 8959 122 WILLIAM",
+                "group": "Сумка",
+                "nameModel": "WILLIAM",
+                "codeModel": "L0583",
+                "codeColor": "122",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА WILLIAM",
+                "article": "L0583 8959 101 WILLIAM",
+                "group": "Сумка",
+                "nameModel": "WILLIAM",
+                "codeModel": "L0583",
+                "codeColor": "101",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА WILLIAM",
+                "article": "L0583 8959 136 WILLIAM",
+                "group": "Сумка",
+                "nameModel": "WILLIAM",
+                "codeModel": "L0583",
+                "codeColor": "136",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА WILLIAM",
+                "article": "L0583 8959 999 WILLIAM",
+                "group": "Сумка",
+                "nameModel": "WILLIAM",
+                "codeModel": "L0583",
+                "codeColor": "999",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА WILSON",
+                "article": "L0688 8959 348 WILSON",
+                "group": "Сумка",
+                "nameModel": "WILSON",
+                "codeModel": "L0688",
+                "codeColor": "348",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА WILSON",
+                "article": "L0688 8959 136 WILSON",
+                "group": "Сумка",
+                "nameModel": "WILSON",
+                "codeModel": "L0688",
+                "codeColor": "136",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА WILSON",
+                "article": "L0688 8959 101 WILSON",
+                "group": "Сумка",
+                "nameModel": "WILSON",
+                "codeModel": "L0688",
+                "codeColor": "101",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА ZAC",
+                "article": "L0700 8959 136 ZAC",
+                "group": "Сумка",
+                "nameModel": "ZAC",
+                "codeModel": "L0700",
+                "codeColor": "136",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": null,
+                        "sizeRU": null,
+                        "sizeINT": null
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ЛЕТО 24"
+                }
+            ],
+            "strProduct": {
+                "name": "СУМКА ZAC",
+                "article": "L0700 8959 122 ZAC",
+                "group": "Сумка",
+                "nameModel": "ZAC",
+                "codeModel": "L0700",
+                "codeColor": "122",
+                "nameColor": null,
+                "codeMaterial": "8959",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ШР ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "ТОП ABE",
+                "article": "M5123 251 001 ABE",
+                "group": "Топ",
+                "nameModel": "ABE",
+                "codeModel": "M5123",
+                "codeColor": "001",
+                "nameColor": null,
+                "codeMaterial": "251",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ШР ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "ТОП ABE",
+                "article": "M5123 251 224 ABE",
+                "group": "Топ",
+                "nameModel": "ABE",
+                "codeModel": "M5123",
+                "codeColor": "224",
+                "nameColor": null,
+                "codeMaterial": "251",
+                "composition": null,
+                "images": []
+            }
+        },
+        {
+            "items": [
+                {
+                    "size": {
+                        "sizeIT": "42",
+                        "sizeRU": "44",
+                        "sizeINT": "M"
+                    },
+                    "place": "Склад Неглинная",
+                    "quant": 1,
+                    "sezon": "ШР ЗИМА 24/25"
+                }
+            ],
+            "strProduct": {
+                "name": "ТОП PERUGIA",
+                "article": "H5231M 251 107 PERUGIA",
+                "group": "Топ",
+                "nameModel": "PERUGIA",
+                "codeModel": "H5231M",
+                "codeColor": "107",
+                "nameColor": null,
+                "codeMaterial": "251",
+                "composition": "96%ШЕЛК 4%ЭЛАСТАН",
+                "images": []
+            }
+        }
+    ]
+}

@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=127, verbose_name='Название')),
                 ('date', models.DateField(default=datetime.datetime.now, verbose_name='Дата')),
-                ('photo', models.ImageField(upload_to='uploads/news/% Y/% m/% d/', verbose_name='Фотография')),
+                ('photo', models.ImageField(upload_to='uploads/news/', verbose_name='Фотография')),
                 ('first_description', models.TextField(blank=True, null=True, verbose_name='Описание до фото')),
                 ('second_description', models.TextField(blank=True, null=True, verbose_name='Описание после фото')),
             ],
@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
             name='NewsPhotos',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('photo', models.ImageField(upload_to='uploads/news/% Y/% m/% d/', verbose_name='Фотография')),
+                ('photo', models.ImageField(upload_to='uploads/news/', verbose_name='Фотография')),
                 ('news', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main.news')),
             ],
         ),

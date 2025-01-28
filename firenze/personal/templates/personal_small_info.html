@@ -1,3 +1,6 @@
-<img class="lk-panel__img" src="../../static/oldFrontPages/account/img/af.png" alt="" />
-<div class="lk-panel__name">Имя Фамилия</div>
-<div class="lk-panel__mail">example@example.com</div>
+<form class="lk-panel__img-wrap">
+  <img class="lk-panel__img" src="../../static/oldFrontPages/account/img/af.png" alt="" />
+  <input type="file" class="lk-panel__img-inp" name="file">
+</form>
+<div class="lk-panel__name">{{user.first_name}} {{user.last_name}}</div>
+<div class="lk-panel__mail">{{user.email}}</div>

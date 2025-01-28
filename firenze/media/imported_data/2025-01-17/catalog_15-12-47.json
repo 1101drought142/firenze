@@ -1,0 +1,77 @@
+{
+    "test1c": "0.8",
+    "items": [
+        {
+            "size": {
+                "sizeIT": null,
+                "sizeRU": null,
+                "sizeINT": null
+            },
+            "place": "Архангельское (Магазин) НС",
+            "quant": 2,
+            "sezon": "СТОК ЛЕТО 23"
+        },
+        {
+            "size": {
+                "sizeIT": null,
+                "sizeRU": null,
+                "sizeINT": null
+            },
+            "place": "Внуково (Магазин) ПР",
+            "quant": 2,
+            "sezon": "СТОК ЛЕТО 23"
+        },
+        {
+            "size": {
+                "sizeIT": null,
+                "sizeRU": null,
+                "sizeINT": null
+            },
+            "place": "Внуково (Магазин) ПР",
+            "quant": -1,
+            "sezon": "СТОК ЛЕТО 23"
+        },
+        {
+            "size": {
+                "sizeIT": null,
+                "sizeRU": null,
+                "sizeINT": null
+            },
+            "place": "Архангельское (Магазин) НС",
+            "quant": -1,
+            "sezon": "СТОК ЛЕТО 23"
+        },
+        {
+            "size": {
+                "sizeIT": null,
+                "sizeRU": null,
+                "sizeINT": null
+            },
+            "place": "Архангельское (Магазин) НС",
+            "quant": 1,
+            "sezon": "СТОК ЛЕТО 23"
+        },
+        {
+            "size": {
+                "sizeIT": null,
+                "sizeRU": null,
+                "sizeINT": null
+            },
+            "place": "Внуково (Магазин) ПР",
+            "quant": 1,
+            "sezon": "СТОК ЛЕТО 23"
+        }
+    ],
+    "strProduct": {
+        "name": "БОТИНКИ AVRIL",
+        "article": "H0211 7012 999 AVRIL",
+        "group": "Ботинки",
+        "nameModel": "AVRIL",
+        "codeModel": "H0211",
+        "codeColor": "999",
+        "nameColor": "ЧЕРНЫЙ",
+        "codeMaterial": "7012",
+        "composition": null,
+        "images": []
+    }
+}

@@ -15,43 +15,44 @@
                 {% include 'personal_menu.html' with active_page='account' %}
             </div>
             <form class="lk-content">
+                {% csrf_token %}
                 <div class="lk-info__title">персональная информация </div>
                 <div class="lk-info">
                     <div class="input textInput">
-                        <div class="input__title">Имя</div><input class="input__field" type="text"
-                            placeholder="Екатерина" />
+                        <div class="input__title">Имя</div><input name="name" class="input__field" type="text"
+                            placeholder="Екатерина" value="{{user.first_name}}"/>
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                     <div class="input textInput">
-                        <div class="input__title">Фамилия</div><input class="input__field" type="text"
-                            placeholder="Иванова" />
+                        <div class="input__title">Фамилия</div><input name="surname" class="input__field" type="text"
+                            placeholder="Иванова" value="{{user.last_name}}"/>
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                     <div class="input mailInput">
-                        <div class="input__title">Почта</div><input class="input__field" type="mail"
-                            placeholder="adam@example.com" />
+                        <div class="input__title">Почта</div><input name="mail" class="input__field" type="mail"
+                            placeholder="email@example.com" value="{{user.email}}"/>
                         <div class="input__error">Почта введена некорректно</div>
                     </div>
                     <div class="input phoneInput">
-                        <div class="input__title">Номер телефона</div><input class="input__field" type="text"
-                            placeholder="+7 900 999 99 99" />
+                        <div class="input__title">Номер телефона</div><input name="phone" class="input__field" type="text"
+                            placeholder="+7 900 999 99 99" value="{{customer.phone_number}}"/>
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                     <div class="input dateInput">
-                        <div class="input__title">Дата рождения</div><input class="input__field" type="text"
-                            placeholder="12.09.1993" />
+                        <div class="input__title">Дата рождения</div><input name="birth_date" class="input__field" type="text"
+                            placeholder="12.09.1993" value="{{customer.birth_date|date:'d.m.Y'}}"/>
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                 </div>
                 <div class="lk-info__title">Сменить пароль</div>
                 <div class="lk-info">
                     <div class="input passwordInput">
-                        <div class="input__title">Старый пароль</div><input class="input__field firstPass" type="password"
+                        <div class="input__title">Старый пароль</div><input name="old_password" class="input__field firstPass" type="password"
                             placeholder="*********" />
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                     <div class="input passwordInput">
-                        <div class="input__title">Новый пароль</div><input class="input__field confPass" type="password"
+                        <div class="input__title">Новый пароль</div><input name="new_password" class="input__field confPass" type="password"
                             placeholder="password" />
                         <div class="input__error">Введите корректное значение!</div>
                     </div>

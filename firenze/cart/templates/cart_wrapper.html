@@ -1,0 +1,17 @@
+<form class="cart">
+    {% for key, cart_item in cart_items.items %}
+    {% include 'cart_item.html'  %}
+    {% endfor %}
+    
+    {% if cart_items %}
+    <div class="cart-total">
+        <div class="cart-total__price"> <span>ИТОГО:</span>
+            <div>{{price}} ₽</div>
+        </div><a href="/order/" class="btn cart-total__offer">Оформить заказ</a>
+    </div>
+    {% else %}
+    <p>
+        Пусто
+    </p>
+    {% endif %}
+</form>

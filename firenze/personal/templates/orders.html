@@ -8,22 +8,27 @@
 {% block content %}
 
 <!-- class: order-status-{ItemId} -->
-<div class="modal overlayContent order-status order-status-1">
+{% for order in orders %}
+<div class="modal overlayContent order-status order-status-{{order.id}}">
     <div class="modal__close close-overlays"> <img class="modal__close-img" src="{% static 'icons/cross.svg' %}" alt />
     </div>
-    <div class="order-status__title">Информация о заказе №123-43221</div>
-    <div class="order-status__info">Общая сумма заказа: 15 999 ₽</div>
-    <div class="order-status__info">Статус: Оплачен</div>
-    <div class="order-status__info">Дата оформления: 12.09.2024 14:35</div>
-    <div class="order-status__info">Адрес доставки: Ул.ю Тверская д.18 кв. 32</div>
+    <div class="order-status__title">Информация о заказе №{{order.id}}</div>
+    <div class="order-status__info">Общая сумма заказа: {{order.price}} ₽</div>
+    <div class="order-status__info">Статус: {{order.order_status}}</div>
+    <div class="order-status__info">Дата оформления: {{order.date|date:"d.m.Y"}}</div>
+    <div class="order-status__info">Адрес доставки: {{order.shop.address}}</div>
     <div class="order-status__images">
-        <img src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt="" class="order-status__images-item">
-        <img src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt="" class="order-status__images-item">
-        <img src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt="" class="order-status__images-item">
-        <img src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt="" class="order-status__images-item">
+        {% for variant in order.cart_items.all %}
+            {% if variant.photo %}
+            <img class="order-status__images-item" src="{{variant.photo.url}}" alt />
+            {% elif variant.product.photo %}
+            <img class="order-status__images-item" src="{{variant.product.photo.url}}" alt />
+
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
-
+{% endfor %}
 <section class="lk-sec">
     <div class="container">
         <h1 class="lk__title page-title">аккаунт</h1>
@@ -34,50 +39,28 @@
             </div>
             <div class="lk-content">
                 <div class="lk-orders">
+                    {% for order in orders %}
                     <div class="status">
-                        <div class="status-images"> <img class="status-images__img"
-                                src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt /><img
-                                class="status-images__img" src="{% static 'oldFrontPages/account/img/qwe.png' %}"
-                                alt /><img class="status-images__img"
-                                src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt /><img
-                                class="status-images__img" src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt />
+                        <div class="status-images"> 
+                            {% for variant in order.cart_items.all %}
+                                {% if variant.photo %}
+                                <img class="status-images__img" src="{{variant.photo.url}}" alt />
+                                {% elif variant.product.photo %}
+                                <img class="status-images__img" src="{{variant.product.photo.url}}" alt />
+
+                                {% endif %}
+                            {% endfor %}
                         </div>
                         <div class="status-content">
-                            <div class="status-content__status">В обработке
-                                - оплачен</div>
+                            <div class="status-content__status">{{order.order_status}}</div>
                             <div class="status-content__number">заказ
-                                #123</div>
+                                #{{order.id}}</div>
                             <div class="status-content__date">от
-                                08.08.24</div>
+                                {{order.date|date:"d.m.Y"}}</div>
                             <!-- data-modal: order-status-{ItemId} -->
-                        </div><button class="btn status__btn open-modal" data-modal="order-status-1">Подробнее</button>
+                        </div><button class="btn status__btn open-modal" data-modal="order-status-{{order.id}}">Подробнее</button>
                     </div>
-                    <div class="status">
-                        <div class="status-images"> <img class="status-images__img"
-                                src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt /><img
-                                class="status-images__img" src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt />
-                        </div>
-                        <div class="status-content">
-                            <div class="status-content__status">В обработке
-                                - оплачен</div>
-                            <div class="status-content__number">заказ
-                                #123</div>
-                            <div class="status-content__date">от
-                                08.08.24</div>
-                        </div><button class="btn status__btn">Подробнее</button>
-                    </div>
-                    <div class="status">
-                        <div class="status-images"> <img class="status-images__img"
-                                src="{% static 'oldFrontPages/account/img/qwe.png' %}" alt /></div>
-                        <div class="status-content">
-                            <div class="status-content__status">В обработке
-                                - оплачен</div>
-                            <div class="status-content__number">заказ
-                                #123</div>
-                            <div class="status-content__date">от
-                                08.08.24</div>
-                        </div><button class="btn status__btn">Подробнее</button>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

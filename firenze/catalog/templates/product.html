@@ -8,12 +8,14 @@
 
 {% block content %}
 <div class="modal overlayContent sizes-modal">
-    <div class="modal__close close-overlays"> <img class="modal__close-img" src="../../shared/icons/cross.svg" alt />
+    <div class="modal__close close-overlays"> <img class="modal__close-img" src="{% static 'icons/cross.svg' %}" alt />
     </div>
-    <div class="modal__title">Как определить размер</div><img class="modal__img" src="./img/sizes.png" alt />
+    <div class="modal__title">Как определить размер</div>
+    <img class="modal__img desk" src="{% static 'oldFrontPages/product/img/sizes.png' %}" alt />
+    <img class="modal__img mob" src="{% static 'oldFrontPages/product/img/sizesMob.png' %}" alt />
 </div>
 <section class="pproduct-sec">
-    <div class="container"> <a class="btn pproduct-back" href="./">Назад в каталог</a>
+    <div class="container"> <a class="btn pproduct-back" href="/catalog/">Назад в каталог</a>
         <div class="pproduct" data-product-id="{{product.id}}">
             {% include 'product_content.html'%}
         </div>

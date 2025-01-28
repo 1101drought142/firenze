@@ -1,165 +1,263 @@
 <html>
-{% load static %}
+    {% load static %}
 
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        {% block seo %}{% endblock seo %}
+        <link rel="stylesheet" href="{% static 'global.css' %}" />
+        <link rel="stylesheet" href="{% static 'header.css' %}" />
+        {% block styles %}{% endblock styles %}
+    </head>
 
+    <body>
+        <span id="csrf" style="display: none;">{% csrf_token %}</span>
+        <div class="modal-bg close-overlays"></div>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    {% block seo %}{% endblock seo %}
-    <link rel="stylesheet" href="{% static 'global.css' %}" />
-    <link rel="stylesheet" href="{% static 'header.css' %}" />
-    {% block styles %}{% endblock styles %}
-</head>
+        <div class="modal sale-modal overlayContent">
+            <div class="modal__close close-overlays"> <img
+                    class="modal__close-img"
+                    src="{% static 'icons/cross.svg' %}"
+                    alt />
+            </div>
+            <img src="{% static '/img/salemodal.png' %}" alt
+                class="sale-modal__img">
+            <div class="sale-modal__content">
+                <h3 class="sale-modal__title">Для вас скидка!</h3>
+                <p class="sale-modal__desc">При регистрации на сайте вы
+                    получаете постоянную скидку 5%, которая может
+                    повышаться в клиентские дни</p>
+                <a href="/catalog/" class="btn sale-modal__btn">В каталог</a>
+            </div>
+        </div>
 
-<body>
-    <div class="modal-bg close-overlays"></div>
-
-    <div class="search-menu overlayContent">
-        <img src="{% static 'icons/cross.svg' %}" class="search-menu__close">
-        <div class="search-top-wrap">
-            <div class="container">
-                <div class="search-top">
-                    <div class="search-top__btn">
-                        <img class="search-top__img" src="{% static 'icons/search.svg' %}">
+        <div class="search-menu overlayContent">
+            <img src="{% static 'icons/cross.svg' %}"
+                class="search-menu__close">
+            <div class="search-top-wrap">
+                <div class="container">
+                    <div class="search-top">
+                        <div class="search-top__btn">
+                            <img class="search-top__img"
+                                src="{% static 'icons/search.svg' %}">
+                        </div>
+                        <input class="search-top__input" type="text"
+                            placeholder="Введите запрос">
                     </div>
-                    <input class="search-top__input" type="text" placeholder="Введите запрос">
+                </div>
+            </div>
+            <div class="search-results">
+                <div class="container">
+                    <div class="search-items">
+
+                    </div>
+                    <div class="search-not-found">
+                        <h2 class="search-not-found__title">Ничего не
+                            найдено!</h2>
+                        <a href="/catalog/"
+                            class="search-not-found__btn">Перейти в каталог</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="search-results">
+
+        <div class="burger-menu">
+            <a href="/catalog/" class="burger-menu__item category">Каталог</a>
+            <a href="/favourites/"
+                class="burger-menu__item category">Избранное</a>
+            <div href class="burger-menu__item category">Клиентам</div>
+            <a href="/soon/" class="burger-menu__item">Правила оформления
+                заказов</a>
+            <a href="/payment/" class="burger-menu__item">Оплата</a>
+            <a href="/shipping/" class="burger-menu__item">Доставка</a>
+            <a href="/return/" class="burger-menu__item">Обмен и возврат</a>
+            <div href class="burger-menu__item category">Мир antonelli
+                firenze</div>
+            <a href="/about/" class="burger-menu__item">О бренде</a>
+            <a href="/shops/" class="burger-menu__item">Магазины</a>
+            <a href="/news/" class="burger-menu__item">Новости</a>
+        </div>
+
+        <div class="snack base-snack overlayContent">
+            <div class="snack-content">
+                <div class="base-snack-content"></div>
+            </div>
+            <div class="snack__close close-overlays"> <img
+                    src="{% static 'icons/cross.svg' %}" /></div>
+        </div>
+        <div class="snack error-snack overlayContent">
+            <div class="snack-content">
+                <div>Непредвиденная ошибка. Попробуйте повторить позже</div>
+            </div>
+            <div class="snack__close close-overlays"> <img
+                    src="{% static 'icons/cross.svg' %}" /></div>
+        </div>
+        <div class="snack fav-snack overlayContent"> <img class="snack__img"
+                src="{% static 'icons/heartFilled.svg' %}" />
+            <div class="snack-content">
+                <div>Товар добавлен в избранное</div><a
+                    class="snack-content__link" href="/favourites/">Перейти</a>
+            </div>
+            <div class="snack__close close-overlays"> <img
+                    src="{% static 'icons/cross.svg' %}" /></div>
+        </div>
+        <div class="snack fav-removed overlayContent"> <img class="snack__img"
+                src="{% static 'icons/heartFilled.svg' %}" />
+            <div class="snack-content">
+                <div>Товар удалён из избранного</div><a
+                    class="snack-content__link" href="/favourites/">Перейти</a>
+            </div>
+            <div class="snack__close close-overlays"> <img
+                    src="{% static 'icons/cross.svg' %}" /></div>
+        </div>
+        <div class="snack add-success overlayContent"> <img class="snack__img"
+                src="{% static 'icons/cart.svg' %}" />
+            <div class="snack-content">
+                <div>Товар добавлен в корзину</div><a
+                    class="snack-content__link" href="/cart/">Перейти</a>
+            </div>
+            <div class="snack__close close-overlays"> <img
+                    src="{% static 'icons/cross.svg' %}" /></div>
+        </div>
+        <header class="header-sec">
             <div class="container">
-                <div class="search-items">
-                    
+                <div class="header">
+                    <div class="header-actions mob">
+                        <div
+                            class="header-actions__item header-actions__item--search mob open-search"><img
+                                class="header-actions__item-img"
+                                src="{% static 'icons/search.svg' %}" /></div>
+                        <div
+                            class="header-actions__item header-burger burger-btn">
+                            <img class="header-actions__item-img opener"
+                                src="{% static 'icons/burger.svg' %}" />
+                            <img class="header-actions__item-img closer"
+                                src="{% static 'icons/burgerClose.svg' %}" />
+                        </div>
+                    </div><a class="header__logo" href="/"><img
+                            class="header__logo-img"
+                            src="{% static 'icons/logo.svg' %}" /></a>
+                    <div class="header__list">
+                        <a class="header__list-item"
+                            href="/catalog/">Каталог</a>
+                        <div class="header__list-item dropdown-item"
+                            href="/about/">Мир Antonelli Firenze
+                            <div class="dropdown-item-list">
+                                <a href="/about/"
+                                    class="dropdown-item-list__item">О
+                                    бренде</a>
+                                <a href="/shops/"
+                                    class="dropdown-item-list__item">Магазины</a>
+                                <a href="/news/"
+                                    class="dropdown-item-list__item">Новости</a>
+                            </div>
+
+                        </div>
+                        <div class="header__list-item dropdown-item"
+                            href="/about/">Клиентам
+                            <div class="dropdown-item-list">
+                                <a href="/shipping/"
+                                    class="dropdown-item-list__item">Правила
+                                    оформления заказов</a>
+                                <a href="/payment/"
+                                    class="dropdown-item-list__item">Оплата</a>
+                                <a href="/shipping/"
+                                    class="dropdown-item-list__item">Доставка</a>
+                                <a href="/return/"
+                                    class="dropdown-item-list__item">Обмен и
+                                    возврат</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <div
+                            class="header-actions__item header-actions__item--search desk open-search"><img
+                                class="header-actions__item-img"
+                                src="{% static 'icons/search.svg' %}" /></div>
+                        <a href="/favourites/"
+                            class="header-actions__item header-actions__item--heart"><img
+                                class="header-actions__item-img"
+                                src="{% static 'icons/heart.svg' %}" /></a>
+                        <a href="/account/"
+                            class="header-actions__item header-actions__item--user"><img
+                                class="header-actions__item-img"
+                                src="{% static 'icons/user.svg' %}" /></a>
+                        <a href="/cart/"
+                            class="header-actions__item header-actions__item--cart"><img
+                                class="header-actions__item-img"
+                                src="{% static 'icons/cart.svg' %}" /></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </header>
+    </body>
 
-    <div class="burger-menu">
-        <a href="/catalog/" class="burger-menu__item category">Каталог</a>
-        <a href="/" class="burger-menu__item category">Клиентам</a>
-        <a href="/shipping/" class="burger-menu__item">Правила оформления заказов</a>
-        <a href="/payment/" class="burger-menu__item">Оплата</a>
-        <a href="/shipping/" class="burger-menu__item">Доставка</a>
-        <a href="/shipping/" class="burger-menu__item">Обмен и возврат</a>
-        <a href="/" class="burger-menu__item category">Мир antonelli firenze</a>
-        <a href="/return/" class="burger-menu__item">О бренде</a>
-        <a href="/shops/" class="burger-menu__item">Магазины</a>
-        <a href="/news/" class="burger-menu__item">Новости</a>
-        <a href="/" class="burger-menu__item">Контакты</a>
-    </div>
+    {% block content %}{% endblock content %}
 
-
-    <div class="snack base-snack overlayContent">
-        <div class="snack-content">
-            <div class="base-snack-content"></div>
-        </div>
-        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
-    </div>
-    <div class="snack error-snack overlayContent">
-        <div class="snack-content">
-            <div>Непредвиденная ошибка. Попробуйте повторить позже</div>
-        </div>
-        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
-    </div>
-    <div class="snack fav-snack overlayContent"> <img class="snack__img" src="{% static 'icons/heartFilled.svg' %}" />
-        <div class="snack-content">
-            <div>Товар добавлен в избранное</div><a class="snack-content__link" href="./">Перейти</a>
-        </div>
-        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
-    </div>
-    <div class="snack fav-removed overlayContent"> <img class="snack__img" src="{% static 'icons/heartFilled.svg' %}" />
-        <div class="snack-content">
-            <div>Товар удалён из избранного</div><a class="snack-content__link" href="./">Перейти</a>
-        </div>
-        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
-    </div>
-    <div class="snack add-success overlayContent"> <img class="snack__img" src="{% static 'icons/cart.svg' %}" />
-        <div class="snack-content">
-            <div>Товар добавлен в корзину</div><a class="snack-content__link" href="/cart/">Перейти</a>
-        </div>
-        <div class="snack__close close-overlays"> <img src="{% static 'icons/cross.svg' %}" /></div>
-    </div>
-    <header class="header-sec">
+    <link rel="stylesheet" href="{% static 'footer.css' %}" />
+    <footer class="footer-sec">
         <div class="container">
-            <div class="header">
-                <div class="header-actions mob">
-                    <div class="header-actions__item header-actions__item--search mob open-search"><img
-                            class="header-actions__item-img" src="{% static 'icons/search.svg' %}" /></div>
-                    <div class="header-actions__item header-burger burger-btn">
-                        <img class="header-actions__item-img opener" src="{% static 'icons/burger.svg' %}" />
-                        <img class="header-actions__item-img closer" src="{% static 'icons/burgerClose.svg' %}" />
+            <div class="footer">
+                <div class="footer-left">
+                    <a class="footer__logo" href="/"> <img
+                            class="footer__logo-img"
+                            src="{% static '/icons/logo.svg' %}"
+                            alt /></a>
+                    <div class="footer-links">
+                        <div class="footer-links__list">
+                            <a class="footer-links__list-item" href="/catalog/">
+                                <b>Каталог</b></a>
+                        </div>
+                        <div class="footer-links__list">
+                            <div class="footer-links__list-item" href="about">
+                                <b>Мир
+                                    Antonelli firenze</b></div>
+                            <a class="footer-links__list-item" href="/about">
+                                О бренде</a>
+                            <a class="footer-links__list-item"
+                                href="/shops/">Магазины</a>
+                            <a class="footer-links__list-item"
+                                href="/news/">Новости</a>
+                            <!-- <a class="footer-links__list-item"
+                            href>Контакты</a> -->
+                        </div>
+                        <div class="footer-links__list">
+                            <div class="footer-links__list-item" href>
+                                <b>Клиентам</b></div>
+                                <a
+                                class="footer-links__list-item" href="/rules/">Правила
+                                оформления заказов</a><a
+                                class="footer-links__list-item"
+                                href="/payment/">Оплата</a><a
+                                class="footer-links__list-item"
+                                href="/shipping/">Доставка</a><a
+                                class="footer-links__list-item" href="/return/">Обмен и
+                                возврат</a>
+                        </div>
                     </div>
-                </div><a class="header__logo" href="/"><img class="header__logo-img"
-                        src="{% static 'icons/logo.svg' %}" /></a>
-                <div class="header__list"> <a class="header__list-item" href="/catalog/">Каталог</a><a
-                        class="header__list-item" href="./">Мир Antonelli Firenze</a><a class="header__list-item"
-                        href="./">Клиентам</a></div>
-                <div class="header-actions">
-                    <div class="header-actions__item header-actions__item--search desk open-search"><img
-                            class="header-actions__item-img" src="{% static 'icons/search.svg' %}" /></div>
-                    <a href="/favourites/" class="header-actions__item header-actions__item--heart"><img class="header-actions__item-img"
-                            src="{% static 'icons/heart.svg' %}" /></a>
-                    <a href="/account/" class="header-actions__item header-actions__item--user"><img class="header-actions__item-img"
-                            src="{% static 'icons/user.svg' %}" /></a>
-                    <a href="/cart/" class="header-actions__item header-actions__item--cart"><img class="header-actions__item-img"
-                            src="{% static 'icons/cart.svg' %}" /></a>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-contacts">
+                        <div class="footer-contacts__item">Ул. Тверской Бульвар,
+                            д. 1</div>
+                        <div class="footer-contacts__item">с 10:00
+                            - 22:00</div><a class="footer-contacts__item"
+                            href="tel:88009999999">8 800 999 99 99</a>
+                    </div>
+                    <div class="footer-policy">
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-</body>
+    </footer>
+    <script src="{% static 'api.js' %}"></script>
+    <script src="{% static 'main.js' %}"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-{% block content %}{% endblock content %}
+    {% block scripts %}
+    {% endblock scripts %}
 
-
-<link rel="stylesheet" href="{% static 'footer.css' %}" />
-<footer class="footer-sec">
-    <div class="container">
-        <div class="footer">
-            <div class="footer-left">
-                <a class="footer__logo" href="/"> <img class="footer__logo-img" src="../../shared/icons/logo.svg"
-                        alt /></a>
-                <div class="footer-links">
-                    <div class="footer-links__list">
-                        <a class="footer-links__list-item" href>
-                            <b>Каталог</b></a>
-                    </div>
-                    <div class="footer-links__list"> 
-                        <a class="footer-links__list-item" href> <b>Мир
-                                Antonelli firenze</b></a>
-                                <a class="footer-links__list-item" href="/return">О
-                            бренде</a><a class="footer-links__list-item" href="/shops">Магазины</a>
-                            <a
-                            class="footer-links__list-item" href="/news/">Новости</a><a class="footer-links__list-item"
-                            href>Контакты</a></div>
-                    <div class="footer-links__list">
-                         <a class="footer-links__list-item" href>
-                            <b>Клиентам</b></a><a class="footer-links__list-item" href>Правила
-                            оформления заказов</a><a class="footer-links__list-item" href>Оплата</a><a
-                            class="footer-links__list-item" href="/shipping/">Доставка</a><a class="footer-links__list-item"
-                            href>Обмен и
-                            возврат</a></div>
-                </div>
-            </div>
-            <div class="footer-right">
-                <div class="footer-contacts">
-                    <div class="footer-contacts__item">Ул. Тверской Бульвар,
-                        д. 1</div>
-                    <div class="footer-contacts__item">с 10:00
-                        - 22:00</div><a class="footer-contacts__item" href="tel:88009999999">8 800 999 99 99</a>
-                </div>
-                <div class="footer-policy">
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="{% static 'api.js' %}"></script>
-<script src="{% static 'main.js' %}"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-{% block scripts %}
-{% endblock scripts %}
 </html>

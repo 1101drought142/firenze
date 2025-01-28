@@ -175,9 +175,11 @@
 .order-shops {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .order-shops__title {
   font-size: 24px;
+  width: 100%;
   margin-top: 16px;
   text-transform: uppercase;
 }
@@ -237,6 +239,9 @@
   .order-shops__label {
     width: 100% !important;
     margin-right: 0 !important;
+  }
+  .order .input__field {
+    font-size: 16px;
   }
 }
 @media (max-width: 480px) {

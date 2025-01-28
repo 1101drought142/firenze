@@ -94,6 +94,30 @@
   color: #fff;
 }
 
+.forgotForm {
+  width: 700px;
+}
+
+.forgotForm .auth-choice__title {
+  text-align: center;
+}
+
+.forgot__goAuth {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.forgot__goAuth.active {
+  display: flex;
+}
+
+.auth__forgotRequest {
+  display: none;
+}
+.auth__forgotRequest.active {
+  display: flex;
+}
+
 @media (max-width: 640px) {
   .auth {
     width: 100% !important;
@@ -107,4 +131,7 @@
   .auth-choice__item {
     font-size: 12px;
   }
+}
+.auth-choice__item {
+  width: 100%;
 }/*# sourceMappingURL=auth.css.map */

@@ -1,14 +1,15 @@
 {% load static %}
-<a class="product" href=""  item-id="123" variant-id="222">
-    <div class="product__main"> <button class="product__main-fav fav-btn" item-id="123"> <img
+<a class="product" href="/product/{{product.id}}/"  item-id="123" variant-id="222">
+    <div class="product__main"> <button class="product__main-fav fav-btn {% if product.in_fav %} active {% endif %}" item-id="{{product.id}}"> <img
                 class="product__main-fav__img disabled" src="{% static 'icons/heart.svg' %}" alt="" /><img
                 class="product__main-fav__img enabled" src="{% static 'icons/heartFilled.svg' %}"
-                alt="" /></button><img class="product__image" src="{{product.photo_url}}"
+                alt="" /></button>
+                <img class="product__image" src="{{product.photo_url}}"
             alt="" />
         <div class="product__info">
             <div class="product__info-sub"><span>Размеры:</span>
                 <div>
-                    {% for size in product.sizes %}
+                    {% for key, size in product.sizes.items %}
                     <p>{{size}}</p>
                     {% endfor %}
                     
@@ -16,14 +17,14 @@
             </div>
             <div class="product__info-sub"><span>Цвета:</span>
                 <div>
-                    {% for color in product.colors %}
+                    {% for key, color in product.colors.items %}
                     <div class="color" style="background-color: #{{color}}"> </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
-    <div class="product-content"> <button class="product__addToCard add-cart"> <img class="product__addToCard-img"
+    <div class="product-content"> <button class="product__addToCard add-cart" data-variant="{{product.variant_id}}"> <img class="product__addToCard-img"
                 src="{% static 'icons/cart.svg' %}" /></button>
         <div class="product__title"> {{product.name}} </div>
         <p class="product__price"> {{product.price}} ₽</p>

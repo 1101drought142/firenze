@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'widgets/pagination/pagination.css' %}"/>
+<div class="pagination blog-pagination">
+    <!-- data-page - страница, на которую ведёт при клике -->
+    {% if pagination.has_previuos %}
+    <div data-page="{{pagination.previuos_page}}" href="?page={{pagination.previuos_page}}" class="pagination__btn"><img src="{% static 'icons/pagPrev.svg' %}"></div>
+    {% endif %}
+    {% for p in pagination.page_range %}
+    <div data-page="{{p}}" href="?page={{p}}" class="pagination__item {% if p == pagination.current_page %} active {% endif %}">{{p}}</div>
+    {% endfor %}
+    {% if pagination.has_next %}
+    <div data-page="{{pagination.next_page}}" href="?page={{pagination.next_page}}" class="pagination__btn"><img src="{% static 'icons/pagNext.svg' %}"></div>
+    {% endif %}
+</div>

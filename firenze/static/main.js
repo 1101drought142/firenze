@@ -128,27 +128,34 @@ body.addEventListener('click', async (e) => {
     e.preventDefault();
     // promise callback
     const itemId = fav.getAttribute('item-id');
-    if (fav.classList.contains('active')) {
-      const res = await PublicAPI.deleteFromFavorites(itemId);
-      if (res.success) {
-        showSnack('fav-removed');
-        fav.classList.remove('active');
+    const csrf = document.querySelector("#csrf input").value;
 
-        if (e.target.closest('.lk-favs')) {
-          e.target.closest('.product').remove();
+    try {
+      if (fav.classList.contains('active')) {
+        const res = await PublicAPI.deleteFromFavorites(itemId);
+        if (res.success) {
+          showSnack('fav-removed');
+          fav.classList.remove('active');
+  
+          if (e.target.closest('.lk-favs')) {
+            e.target.closest('.product').remove();
+          }
+  
+        } else {
+          showSnack('error-snack');
         }
-
       } else {
-        showSnack('error-snack');
+        const res = await PublicAPI.addToFavorites(itemId, csrf);
+        if (res.success) {
+          showSnack('fav-snack');
+          fav.classList.add('active');
+        } else {
+          showSnack('error-snack');
+        }
       }
-    } else {
-      const res = await PublicAPI.addToFavorites(itemId);
-      if (res.success) {
-        showSnack('fav-snack');
-        fav.classList.add('active');
-      } else {
-        showSnack('error-snack');
-      }
+    } catch (e) {
+      console.log(e, ' error')
+      showSnack('error-snack');
     }
 
   }
@@ -161,22 +168,23 @@ body.addEventListener('click', async (e) => {
 body.addEventListener('click', async (e) => {
   if (e.target.closest('.add-cart')) {
     const btn = e.target.closest('.add-cart');
-
+    console.log( e.target)
     e.preventDefault();
     e.stopPropagation();
-    let productId;
-    if (btn.closest('.product')) {
-      productId = btn.closest('.product').getAttribute('variant-id');
-    } else {
-      btn.getAttribute('variant-id');
-    }
-    
+    // let productId;
+    // if (btn.closest('.product')) {
+      
+    //   productId = btn.closest('.product').getAttribute('variant-id');
+    // } else {
+    //   btn.getAttribute('variant-id');
+    // }
+    productId = btn.dataset.variant;
     const res = await PublicAPI.addToCart(productId);
     console.log(res.success);
     if (res.success) {
       showSnack('add-success');
     } else {
-      showSnack(res.message);
+      showBaseSnackWithText(res.message);
     }
   }
 })
@@ -190,10 +198,15 @@ const searchHandler = debounce(async (event) => {
   const string = event.target.value;
   if (string.length > 2) {
     const wrapper = document.querySelector('.search-results .search-items');
+    const notFound = document.querySelector('.search-not-found');
   
     const res = await PublicAPI.search(string);
     if (res) {
+      notFound.classList.remove('active');
       wrapper.innerHTML = res;
+    }
+    if (res.trim() == '') {
+      notFound.classList.add('active');
     }
   }
 
@@ -205,3 +218,21 @@ searchField.addEventListener('input', searchHandler);
 
 
 // search end
+
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+// sale modal
+
+const saleModal = document.querySelector('.sale-modal');
+setTimeout(() => {
+  if (getCookie("saleModalShown")) return;
+  saleModal.classList.add('active');
+  changeModalBgState('enable');
+
+  document.cookie = "saleModalShown=true; path=/; max-age=1209600";
+}, 5 * 1000);

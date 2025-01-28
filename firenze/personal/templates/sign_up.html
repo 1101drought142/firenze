@@ -10,12 +10,18 @@
 <section class="auth-sec">
     <div class="container">
         <form class="auth signUpForm">
+            {% csrf_token %}
             <h1 class="auth__title">регистрация</h1>
             <p class="auth__subtitle">При регистрации на сайте вы получаете постоянную скидку 5%, которая может
                 повышаться в клиентские дни</p>
             <div class="input textInput">
-                <div class="input__title">Имя Фамилия*</div><input class="input__field required" name="name" type="text"
-                    placeholder="Елена Иванова" />
+                <div class="input__title">Имя*</div><input class="input__field required" name="name" type="text"
+                    placeholder="Елена" />
+                <div class="input__error">Введите корректное значение!</div>
+            </div>
+            <div class="input textInput">
+                <div class="input__title">Фамилия*</div><input class="input__field required" name="surname" type="text"
+                    placeholder="Иванова" />
                 <div class="input__error">Введите корректное значение!</div>
             </div>
             <div class="input dateInput">

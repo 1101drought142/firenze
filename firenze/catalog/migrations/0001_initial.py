@@ -58,7 +58,7 @@ class Migration(migrations.Migration):
             name='ProductTypePhotos',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('photo', models.ImageField(upload_to='uploads/catalog/% Y/% m/% d/', verbose_name='Фотография')),
+                ('photo', models.ImageField(upload_to='uploads/catalog/', verbose_name='Фотография')),
                 ('producttype', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='catalog.producttype')),
             ],
         ),

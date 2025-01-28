@@ -16,22 +16,22 @@
                 <div class="order-block personal">
                     <div class="input textInput">
                         <div class="input__title">Имя</div>
-                        <input class="input__field" type="text" placeholder="Екатерина">
+                        <input class="input__field" type="text" name="name" value="{{user.first_name}}" placeholder="Екатерина">
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                     <div class="input textInput">
                         <div class="input__title">Фамилия</div>
-                        <input class="input__field" type="text" placeholder="Иванова">
+                        <input class="input__field" type="text" name="surname" value="{{user.last_name}}" placeholder="Иванова">
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                     <div class="input mailInput">
                         <div class="input__title">Почта</div>
-                        <input class="input__field required" type="mail" placeholder="adam@example.com">
+                        <input class="input__field required"  name="mail" type="mail" value="{{user.email}}" placeholder="email@example.com">
                         <div class="input__error">Почта введена некорректно</div>
                     </div>
                     <div class="input phoneInput">
                         <div class="input__title">Номер Телефона</div>
-                        <input class="input__field required" type="text" placeholder="+7">
+                        <input class="input__field required" name="code" type="text" value="{{customer.phone_number}}" placeholder="+7">
                         <div class="input__error">Введите корректное значение!</div>
                     </div>
                 </div>
@@ -40,21 +40,21 @@
                     <div class="order__choice-title">Способ доставки:</div>
                     <div class="order__choice">
                         <input type="radio" name="delivery" id="delivery-home">
-                        <div
-                            class="order__choice-item tabs__item active"
+                        <!-- <div
+                            class="order__choice-item tabs__item "
                             data-tab-base="delivery"
                             data-tab-val="1"
                             for="delivery-home"
-                        >Доставка</div>
+                        >Доставка</div> -->
                         <input type="radio" name="delivery" id="delivery-shop">
                         <div
-                            class="order__choice-item tabs__item"
+                            class="order__choice-item tabs__item active"
                             data-tab-base="delivery"
                             data-tab-val="2"
                             for="delivery-shop"
                         >Забрать из магазина</div>
                     </div>
-                    <div class="order__choice-content delivery-home tab-content active" data-tab-base="delivery" data-tab-val="1">
+                    <div class="order__choice-content delivery-home tab-content " data-tab-base="delivery" data-tab-val="1">
                         <div class="input textInput">
                             <div class="input__title">Город</div>
                             <input class="input__field required" type="text" placeholder="Москва">
@@ -71,98 +71,31 @@
                             <div class="input__error">Введите корректное значение!</div>
                         </div>
                     </div>
-                    <div class="order__choice-content delivery-shop tab-content" data-tab-base="delivery" data-tab-val="2">
+                    
+                    <div class="order__choice-content delivery-shop tab-content active" data-tab-base="delivery" data-tab-val="2">
+                        {% for key, shop in shops.items %}
                         <h3 class="order-shops__title">Торговые центры</h3>
                         <div class="order-shops">
+                            {% for s in shop %}
                             <input
                                 class="order-shops__input"
                                 type="radio"
                                 checked="checked"
                                 name="shop"
-                                id="shop-1"
+                                id="shop-{{s.id}}"
+                                value="{{s.id}}"
                             >
-                            <label class="order-shops__label" for="shop-1">
-                                <div>Name Store</div>
+                            <label class="order-shops__label" for="shop-{{s.id}}">
+                                <div>{{s.name}}</div>
                                 <span>
-                                    Ул. Владимира Вольфовича Жириновского Длинное название, д.
-                                    50, 2 этаж
+                                    {{s.address}}
                                 </span>
-                                <a href="tel:88009999999">8 800 999 99 99</a>
+                                <a href="tel:{{s.phone}}">{{s.phone}}</a>
                             </label>
-                            <input
-                                class="order-shops__input"
-                                type="radio"
-                                name="shop"
-                                id="shop-2"
-                            >
-                            <label class="order-shops__label" for="shop-2">
-                                <div>Name of Очень длинное название магазина</div>
-                                <span>
-                                    Ул. Пушкина, д. 50, 2
-                                    этаж
-                                </span>
-                                <a href="tel:88009999999">8 800 999 99 99</a>
-                            </label>
-                            <input
-                                class="order-shops__input"
-                                type="radio"
-                                name="shop"
-                                id="shop-3"
-                            >
-                            <label class="order-shops__label" for="shop-3">
-                                <div>Name of</div>
-                                <span>Ул. Пушкина, д. 50, 2 этаж</span>
-                                <a href="tel:88009999999">
-                                    8
-                                    800 999 99 99
-                                </a>
-                            </label>
+                            {% endfor %}
+                            
                         </div>
-                        <h3 class="order-shops__title">Аутлеты</h3>
-                        <div class="order-shops">
-                            <input
-                                class="order-shops__input"
-                                type="radio"
-                                name="shop"
-                                id="shop-4"
-                            >
-                            <label class="order-shops__label" for="shop-4">
-                                <div>Name Store</div>
-                                <span>
-                                    Ул. Владимира Вольфовича Жириновского Длинное название, д.
-                                    50, 2 этаж
-                                </span>
-                                <a href="tel:88009999999">8 800 999 99 99</a>
-                            </label>
-                            <input
-                                class="order-shops__input"
-                                type="radio"
-                                name="shop"
-                                id="shop-5"
-                            >
-                            <label class="order-shops__label" for="shop-5">
-                                <div>Name of Очень длинное название магазина</div>
-                                <span>
-                                    Ул. Пушкина, д. 50, 2
-                                    этаж
-                                </span>
-                                <a href="tel:88009999999">8 800 999 99 99</a>
-                            </label>
-                            <input
-                                class="order-shops__input"
-                                type="radio"
-                                name="shop"
-                                id="shop-6"
-                            >
-                            <label class="order-shops__label" for="shop-6">
-                                <div>Name of</div>
-                                <span>Ул. Пушкина, д. 50, 2 этаж</span>
-                                <a href="tel:88009999999">
-                                    8
-                                    800 999 99 99
-                                </a>
-                            </label>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="order-block payment">
@@ -174,13 +107,13 @@
                             id="payment-online"
                             value="0"
                         >
-                        <label
-                            class="order__choice-item tabs__item active"
+                        <!-- <label
+                            class="order__choice-item tabs__item "
                             data-tab-base="payment"
                             data-tab-val="1"
                             for="payment-online"
                             checked="checked"
-                        >Онлайн-оплата</label>
+                        >Онлайн-оплата</label> -->
                         <input
                             type="radio"
                             name="payment"
@@ -188,7 +121,7 @@
                             value="1"
                         >
                         <label
-                            class="order__choice-item tabs__item"
+                            class="order__choice-item tabs__item active"
                             data-tab-base="payment"
                             data-tab-val="2"
                             for="payment-post"
@@ -206,21 +139,21 @@
             </div>
             <div class="order-info">
                 <div class="order-info-list">
-                    {% include 'order_item.html' %}
-                    {% include 'order_item.html' %}
-                    {% include 'order_item.html' %}
+                    {% for key, cart_item in cart_items.items %}
+                    {% include 'order_item.html'  %}
+                    {% endfor %}
                 </div>
                 <div class="order-info__row">
                     <div>Товар</div>
-                    <span>80 999 ₽</span>
+                    <span>{{price}} ₽</span>
                 </div>
-                <div class="order-info__row">
+                <!-- <div class="order-info__row">
                     <div>Доставка</div>
                     <span>399 ₽</span>
-                </div>
+                </div> -->
                 <div class="order-info__total">
                     <div>ИТОГО:</div>
-                    <span>84 902 ₽</span>
+                    <span>{{price}} ₽</span>
                 </div>
             </div>
         </form>

@@ -110,13 +110,16 @@
   height: 987px;
   margin-top: 100px;
   margin-bottom: 100px;
+  align-items: flex-start;
+  justify-content: start;
 }
 .newsItem-images__item {
   width: calc(50% - 10px);
   margin-right: 20px;
   margin-bottom: 20px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: calc(50% - 40px);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .newsItem-images__item:nth-child(2n) {
   margin-right: 0;

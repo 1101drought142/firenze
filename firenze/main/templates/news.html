@@ -17,37 +17,13 @@
 <section class="news-sec">
     <div class="container">
         <div class="news">
-            <a class="news-item" href="/news/PokaNet"><img class="news-item__img" src="{% static 'oldFrontPages/news/img/news1.jpg' %}" alt="" />
-                <div class="news-item-content"> <span class="news-item__date">07.08.24</span>
-                    <div class="news-item__title">новое поступление весна-лето</div>
+            {% for news_item in news %}
+            <a class="news-item" href="/news/{{news_item.slug}}/"><img class="news-item__img" src="{{news_item.photo.url}}" alt="" />
+                <div class="news-item-content"> <span class="news-item__date">{{news_item.date|date:"d.m.Y"}}</span>
+                    <div class="news-item__title">{{news_item.name}}</div>
                 </div>
             </a>
-            <a class="news-item" href="/news/PokaNet"><img class="news-item__img" src="{% static 'oldFrontPages/news/img/news2.jpg' %}" alt="" />
-                <div class="news-item-content"> <span class="news-item__date">07.08.24</span>
-                    <div class="news-item__title">новое поступление весна-лето новое поступление весна-лето новое
-                        поступление весна-лето новое поступление весна-лето</div>
-                </div>
-            </a>
-            <a class="news-item" href="/news/PokaNet"><img class="news-item__img" src="{% static 'oldFrontPages/news/img/news1.jpg' %}" alt="" />
-                <div class="news-item-content"> <span class="news-item__date">07.08.24</span>
-                    <div class="news-item__title">новое поступление весна-лето</div>
-                </div>
-            </a>
-            <a class="news-item" href="/news/PokaNet"><img class="news-item__img" src="{% static 'oldFrontPages/news/img/news2.jpg' %}" alt="" />
-                <div class="news-item-content"> <span class="news-item__date">07.08.24</span>
-                    <div class="news-item__title">новое поступление весна-лето</div>
-                </div>
-            </a>
-            <a class="news-item" href="/news/PokaNet"><img class="news-item__img" src="{% static 'oldFrontPages/news/img/news1.jpg' %}" alt="" />
-                <div class="news-item-content"> <span class="news-item__date">07.08.24</span>
-                    <div class="news-item__title">новое поступление весна-лето</div>
-                </div>
-            </a>
-            <a class="news-item" href="/news/PokaNet"><img class="news-item__img" src="{% static 'oldFrontPages/news/img/news2.jpg' %}" alt="" />
-                <div class="news-item-content"> <span class="news-item__date">07.08.24</span>
-                    <div class="news-item__title">новое поступление весна-лето</div>
-                </div>
-            </a>
+            {% endfor %}
         </div>
     </div>
 </section>

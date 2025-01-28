@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('birth_date', models.DateField(blank=True, null=True, verbose_name='Дата рождения')),
                 ('phone_number', models.CharField(blank=True, max_length=63, null=True, verbose_name='Номер телефона')),
-                ('photo', models.ImageField(blank=True, null=True, upload_to='uploads/customer/% Y/% m/% d/', verbose_name='Фотография')),
+                ('photo', models.ImageField(blank=True, null=True, upload_to='uploads/customer/', verbose_name='Фотография')),
                 ('cart', models.JSONField(blank=True, null=True, verbose_name='Корзина')),
                 ('favourites', models.JSONField(blank=True, null=True, verbose_name='Избранное')),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),

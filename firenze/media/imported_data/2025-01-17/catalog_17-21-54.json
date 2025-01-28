@@ -1,0 +1,27 @@
+{
+    "test1c": "0.8",
+    "items": [
+        {
+            "size": {
+                "sizeIT": "46",
+                "sizeRU": "48",
+                "sizeINT": "XL"
+            },
+            "place": "Внуково (Магазин) ПР",
+            "quant": 1,
+            "sezon": "СТОК ЗИМА 23/24"
+        }
+    ],
+    "strProduct": {
+        "name": "СВИТЕР С В-ОБРАЗНЫМ ВЫРЕЗОМ GAETA",
+        "article": "41138K 01934 20363 GAETA",
+        "group": "Свитер",
+        "nameModel": "GAETA",
+        "codeModel": "41138K",
+        "codeColor": "20363",
+        "nameColor": "ЗЕЛЕНЫЙ",
+        "codeMaterial": "01934",
+        "composition": null,
+        "images": []
+    }
+}

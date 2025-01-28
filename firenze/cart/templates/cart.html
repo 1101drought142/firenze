@@ -12,20 +12,7 @@
         <div class="cart-top">
             <h1 class="page-title cart__title">Корзина</h1><button class="btn cart__clear">Очистить всю корзину</button>
         </div>
-        <form class="cart">
-
-            {% include 'cart_item.html'  %}
-
-            {% include 'cart_item.html'  %}
-            
-            {% include 'cart_item.html'  %}
-
-            <div class="cart-total">
-                <div class="cart-total__price"> <span>ИТОГО:</span>
-                    <div>1 999 ₽</div>
-                </div><a href="/order/" class="btn cart-total__offer">Оформить заказ</a>
-            </div>
-        </form>
+        {% include 'cart_wrapper.html'  %}
     </div>
 </section>
 

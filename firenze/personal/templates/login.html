@@ -10,19 +10,24 @@
 <section class="auth-sec">
     <div class="container">
         <form class="auth loginForm">
+            {% csrf_token %}
             <h1 class="auth__title">вход</h1>
-            <p class="auth-choice__title">Выберите способ авторизации</p>
+            <!-- <p class="auth-choice__title">Выберите способ авторизации</p>
             <div class="auth-choice">
-                <div class="auth-choice__item tabs__item active" data-tab-base="loginChoice" data-tab-val="1">По номеру
+                <div class="auth-choice__item tabs__item " data-tab-base="loginChoice" data-tab-val="1">По номеру
                     телефона</div>
-                <div class="auth-choice__item tabs__item" data-tab-base="loginChoice" data-tab-val="2">По почте</div>
-            </div><span class="tab-content active" data-tab-base="loginChoice" data-tab-val="1">
+                <div class="auth-choice__item tabs__item active" data-tab-base="loginChoice" data-tab-val="2">По почте</div>
+            </div> -->
+            
+            <!-- <span class="tab-content active" data-tab-base="loginChoice" data-tab-val="1">
                 <div class="input phoneInput">
                     <div class="input__title">Номер телефона*</div><input class="input__field" type="text"
                         placeholder="+7" name="phone" />
                     <div class="input__error">Введите корректное значение!</div>
                 </div>
-            </span><span class="tab-content" data-tab-base="loginChoice" data-tab-val="2">
+            </span> -->
+            
+            <span class="tab-content active" data-tab-base="loginChoice" data-tab-val="2">
                 <div class="input mailInput">
                     <div class="input__title">Почта*</div><input class="input__field" type="mail"
                         placeholder="adam@adam.adam" name="mail" />
@@ -32,9 +37,9 @@
             <div class="input passwordInput">
                 <div class="input__title">Пароль*</div><input class="input__field" type="password" name="password" placeholder="Password" />
                 <div class="input__error">Введите корректное значение!</div>
-            </div><button class="btn black auth__login">Войти</button><a
-                class="btn auth__btn auth__goSignUp">Зарегистрироваться </a><a
-                class="btn auth__btn auth__forgotBtn">Забыли пароль? </a>
+            </div><button class="btn black auth__login">Войти</button>
+            <a href="/sign_up/" class="btn auth__btn auth__goSignUp">Зарегистрироваться </a>
+            <a href="/change_password_request/" class="btn auth__btn auth__forgotBtn">Забыли пароль? </a>
         </form>
     </div>
 </section>

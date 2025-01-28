@@ -14,11 +14,29 @@
 
 
     &__img {
-      margin: 0 auto;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      object-fit: cover;
+      &-wrap {
+        margin: 0 auto;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        & img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+        & input {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0; right: 0; top: 0; bottom: 0;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
     }
 
     &__name {
@@ -167,6 +185,8 @@
     & .paddinger {
       display: block;
       width: 20px;
+      height: 20px;
+      min-width: 20px;
     }
   }
 
@@ -177,12 +197,18 @@
   .order-status {
     padding: 32px;
     border-radius: 0px;
-    width: 100%;;
+    width: 100%;
     &__images {
       &-item {
         width: calc(50% - 5px);
       }
     }
+  }
+
+  .lk-panel__img-wrap,
+  .lk-panel__name,
+  .lk-panel__mail {
+    transform: translateX(-20px);
   }
 }
 
@@ -332,6 +358,18 @@
     }
     &-content {
       margin-top: 29px;
+    }
+  }
+}
+
+
+
+// hovers
+@media (min-width: 1025px) {
+  .lk-panel__list-item {
+    transition: all .3s ease;
+    &:hover {
+      background: rgba($color: #000000, $alpha: 0.1);
     }
   }
 }
